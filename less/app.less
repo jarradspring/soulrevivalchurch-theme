@@ -1,0 +1,900 @@
+/*!
+ * Roots 6.5.1
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+.blockPadding {
+    .row {
+        margin:0;
+    }
+    div[class^="col-"] {
+        padding-right:0;
+        padding-left:0;
+    }
+}
+@font-face {
+    font-family: 'Univers';
+    src: url('../fonts/universltstd-ultracn-webfont.eot');
+    src: url('../fonts/universltstd-ultracn-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/universltstd-ultracn-webfont.woff') format('woff'),
+    url('../fonts/universltstd-ultracn-webfont.ttf') format('truetype'),
+    url('../fonts/universltstd-ultracn-webfont.svg#UniversLTStd59UltraCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.univers {
+    font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.bree {
+    font-family: 'Bree Serif', serif;
+}
+.alegreya {
+    font-family: 'Alegreya Sans', Helvetica, Arial, sans-serif;
+}
+.small_text {
+    text-transform: uppercase;
+    font-size:15px;
+    letter-spacing:3px;
+    font-weight:500;
+}
+.large_text {
+    .univers;
+    letter-spacing:2px;
+    font-size:48px;
+    line-height:48px;
+}
+.large_bree {
+    .bree;
+    font-size:70px;
+    line-height:70px;
+}
+body, input, select, button {
+    .alegreya;
+    color:@textGrey;
+}
+h1, h2, h3, h4, h5, h6 {
+    .alegreya;
+}
+
+//Colours
+@bgGrey: #f2f2f2;
+@textGrey: #6D6D6D;
+@yellow: #EAC159;
+@yellowMedium: #CCA650;
+@yellowDark: #A58442;
+@yellowDarker: #896843;
+@red: #E8695B;
+@redMedium: #C6574B;
+@redDark: #8E3F39;
+@redDarker: #6b3530;
+@blue: #6296F4;
+@blueMedium: #5686CE;
+@blueDark: #4B75B2;
+@blueDarker: #3C618C;
+@green: #0FEDC2;
+@greenMedium: #11D3AE;
+@greenDark: #11BA99;
+@greenDarker: #129E83;
+@orange: #F29764;
+@orangeMedium: #DD885E;
+@orangeDark: #BC7150;
+@orangeDarker: #A86248;
+
+.btnColour(@colour) {
+    background:@colour;
+    webkit-box-shadow: 0px 3px 0px @colour - #191919;
+    -moz-box-shadow: 0px 3px 0px @colour - #191919;
+    box-shadow: 0px 3px 0px @colour - #191919;
+}
+//Buttons
+.btn {
+    padding:8px 30px;
+    .alegreya;
+    font-size:16px;
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    color:#FFFFFF;
+    .border-radius(0);
+    .btnColour(@bgGrey);
+    .transition(all 0.3s ease);
+    &:hover, &:focus, &:active {
+        .btnColour(@bgGrey);
+        color:#ffffff;
+        .transition(all 0.3s ease);
+    }
+}
+.btn.grey {
+    color:#555555;
+}
+.btn.yellow {
+    .btnColour(@yellow);
+    &:hover, &:focus, &:active {
+        .btnColour(@yellowMedium);
+    }
+}
+.btn.yellowMedium {
+    .btnColour(@yellowMedium);
+    &:hover, &:focus, &:active {
+        .btnColour(@yellowDark);
+    }
+}
+.btn.yellowDark {
+    .btnColour(@yellowDark);
+    &:hover, &:focus, &:active {
+        .btnColour(@yellowDarker);
+    }
+}
+.btn.red {
+    .btnColour(@red);
+    &:hover, &:focus, &:active {
+        .btnColour(@redMedium);
+    }
+}
+.btn.redMedium {
+    .btnColour(@redMedium);
+    &:hover, &:focus, &:active {
+        .btnColour(@redDark);
+    }
+}
+.btn.redDark {
+    .btnColour(@redDark);
+    &:hover, &:focus, &:active {
+        .btnColour(@redDarker);
+    }
+}
+.btn.blue {
+     .btnColour(@blue);
+     &:hover, &:focus, &:active {
+         .btnColour(@blueMedium);
+     }
+ }
+.btn.blueMedium {
+    .btnColour(@blueMedium);
+    &:hover, &:focus, &:active {
+        .btnColour(@blueDark);
+    }
+}
+.btn.blueDark {
+    .btnColour(@blueDark);
+    &:hover, &:focus, &:active {
+        .btnColour(@blueDarker);
+    }
+}
+.btn.green {
+    .btnColour(@green);
+    &:hover, &:focus, &:active {
+        .btnColour(@greenMedium);
+    }
+}
+.btn.greenMedium {
+    .btnColour(@greenMedium);
+    &:hover, &:focus, &:active {
+        .btnColour(@greenDark);
+    }
+}
+.btn.greenDark {
+    .btnColour(@greenDark);
+    &:hover, &:focus, &:active {
+        .btnColour(@greenDarker);
+    }
+}
+.btn.orange {
+    .btnColour(@orange);
+    &:hover, &:focus, &:active {
+        .btnColour(@orangeMedium);
+    }
+}
+.btn.orangeMedium {
+    .btnColour(@orangeMedium);
+    &:hover, &:focus, &:active {
+        .btnColour(@orangeDark);
+    }
+}
+.btn.orangeDark {
+    .btnColour(@orangeDark);
+    &:hover, &:focus, &:active {
+        .btnColour(@orangeDarker);
+    }
+}
+
+.navbar {
+    background:#ffffff;
+    border:0;
+    margin:0;
+    .navbar-header {
+        float:none;
+    }
+    .navbar-brand {
+        float:none;
+        padding:15px 0;
+        margin:0;
+        display:block;
+        text-align:center;
+        width:100%;
+        a {
+            display:inline-block;
+            text-align:center;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        h1 {
+            .univers;
+            text-transform:uppercase;
+            letter-spacing: 2px;
+            margin:0;
+            font-size:25px;
+            color:#6d6d6d;
+            span {
+                color:#898989;
+            }
+        }
+    }
+    .navbar-toggle {
+        display:block;
+        float:left;
+        background:#6D6D6D;
+        margin:0;
+        .border-radius(0);
+        border:0;
+        height:60px;
+        width:60px;
+        padding:20px;
+        text-align: center;
+        i {
+            color:#ffffff;
+            font-size:20px;
+        }
+        &:hover, &:active, &:focus {
+            background-color: #565656;
+            outline:none;
+        }
+
+    }
+}
+.mp-menu {
+    background:#6d6d6d;
+    ul {
+        li {
+            a {
+                padding:7px 20px;
+                text-shadow:none;
+                span {
+                    color:#ffffff;
+                    display:block;
+                    font-weight:400;
+                    text-transform: uppercase;
+                    text-shadow: none;
+                    box-shadow: none;
+                }
+                .big {
+                    .univers;
+                    font-size:24px;
+                    letter-spacing: 2px;
+
+                }
+                .small_text {
+                    .alegreya;
+                    font-size:10px;
+                    letter-spacing: 4px;
+                }
+                &:hover, &:focus, &:active {
+                    text-decoration:none;
+                }
+            }
+
+        }
+    }
+}
+
+//SLIDER ---------------------------------------
+.carousel-control {
+    i {
+        font-size:60px;
+        top:50%;
+        margin-top:-30px;
+        position:absolute;
+        box-shadow:none;
+        text-shadow:none;
+    }
+}
+
+//TRIBLOCK ---------------------------------------
+.triblock {
+    .blockPadding;
+}
+#home {
+    .visit {
+        padding:45px 0;
+        background: #F2F2F2;
+        text-align:center;
+        h2 {
+            .univers;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:@yellow;
+            margin:0;
+            font-size:40px;
+            span {
+                .bree;
+                color:@textGrey;
+                text-transform: uppercase;
+            }
+        }
+        .small_text {
+            font-size:16px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color:#aaaaaa;
+            display:block;
+            margin-bottom:10px;
+        }
+    }
+    .jesus_changes {
+        padding:45px 0;
+        background:#EAC159;
+        text-align:center;
+        h2 {
+            color:#ffffff;
+            .bree;
+            text-transform: lowercase;
+            font-size:60px;
+            margin:0 0 15px;
+        }
+        .small_text {
+            font-size:16px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color:@textGrey;
+            display:block;
+            margin-bottom:-10px;
+        }
+    }
+    .differently {
+        background:@bgGrey;
+        padding:30px 20px;
+        .small_text {
+            font-size:15px;
+            color:@redMedium;
+            margin-bottom:0px;
+            text-transform:uppercase;
+            letter-spacing: 3px;
+        }
+        .large_text {
+            color:@red;
+            margin:5px 0;
+        }
+    }
+    .different_features {
+        .blockPadding;
+        .block {
+            text-align:center;
+            padding:30px 20px;
+            .option {
+                font-size:15px;
+                padding-bottom:10px;
+                border-bottom:1px solid @redMedium;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color:@redDark;
+            }
+            .small_text {
+                font-size:15px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color:#ffffff;
+                margin-bottom:0;
+            }
+            .large_text {
+                .univers;
+                font-size:48px;
+                line-height:48px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color:@redMedium;
+            }
+            .fa {
+                font-size:125px;
+                color:@red;
+            }
+            &.factory {
+                background:@red;
+            }
+            &.saturday {
+                background: @redMedium;
+                .option {
+                    border-bottom:1px solid @redDark;
+                }
+                .large_text {
+                    color:@redDark;
+                }
+            }
+            &.dinner {
+                background: @redDark;
+                .option {
+                    color:@red;
+                    border-bottom:1px solid @red;
+                }
+                .large_text {
+                    color:@red;
+                }
+            }
+        }
+    }
+    .night_format {
+        text-align:center;
+        background:@bgGrey;
+        padding:30px 0;
+        .container {
+            max-width:900px;
+        }
+        .small_text {
+            color:@red;
+        }
+        .clock {
+            position:relative;
+            .fa {
+                font-size:30px;
+                color:@redMedium;
+            }
+            span {
+                display:inline-block;
+            }
+            span:before,
+            span:after {
+                border-top: 1px solid @red;
+                display: block;
+                height: 1px;
+                content: " ";
+                width: 47%;
+                position: absolute;
+                left: 0;
+                top: 15px;
+            }
+            span:after {
+                right: 0;
+                left: auto;
+            }
+        }
+        .time {
+            .univers;
+            font-size:24px;
+            line-height:24px;
+            color:@redDark;
+            letter-spacing:2px;
+            margin-bottom:5px;
+            span {
+                font-size:16px;
+            }
+        }
+        .large_text {
+            color:@red;
+        }
+        .col-sm-2 {
+            margin-bottom:20px;
+        }
+    }
+    .instagram_feed {
+        padding:30px 0;
+        .large_bree {
+            margin-top:-20px;
+            color:@blue;
+        }
+    }
+
+}
+
+.jesus_container {
+    div[class^="col-sm-"] {
+    }
+    .item {
+        text-align: center;
+        margin:0 -15px;
+        p {
+            font-size:16px;
+            line-height:25px;
+            color:#ffffff;
+        }
+        h1, h2, h3 {
+            .bree;
+            color:#ffffff;
+            span {
+                .alegreya;
+                font-size:16px;
+                text-transform:uppercase;
+                letter-spacing:4px;
+                color:@textGrey;
+                display:block;
+            }
+        }
+        .btn {
+            display:block;
+            width:200px;
+            margin:15px auto 0;
+        }
+        h1 {
+            font-size:70px;
+            line-height:35px;
+            margin-bottom:40px;
+            margin-top:0;
+        }
+        h2 {
+            font-size:70px;
+            line-height:35px;
+            margin-bottom:40px;
+            margin-top:0;
+        }
+        h3 {
+            font-size:50px;
+            line-height:35px;
+            margin-bottom:40px;
+            margin-top:0
+        }
+        &.jesus_main {
+            background:@yellow;
+            padding:80px 0;
+            p {
+                width:450px;
+                margin: 0 auto 10px;
+            }
+        }
+        &.love_god {
+            background:@yellowMedium;
+            padding:40px 0;
+            p {
+                width:350px;
+                margin: 0 auto 10px;
+            }
+        }
+        &.love_others {
+            background:@yellowDark;
+            padding:40px 0;
+            p {
+                width:350px;
+                margin: 0 auto 10px;
+            }
+        }
+    }
+    .changes_lives {
+        .title {
+            background:@yellowMedium;
+            padding:20px 10px;
+            h3 {
+                margin-bottom:10px;
+                .univers;
+                font-weight:normal;
+                text-transform:uppercase;
+                font-size:48px;
+                letter-spacing:2px;
+            }
+        }
+        .links {
+            background:@yellowDark;
+        }
+        .image {
+            img {
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content {
+}
+
+.sermons {
+    background:@bgGrey;
+    h2 {
+        .univers;
+        text-transform:uppercase;
+        letter-spacing:2px;
+        font-size:48px;
+        color:@blue;
+        text-align:center;
+        margin:50px 0 40px;
+    }
+}
+.sermon {
+    background:@blueDark;
+    text-align:center;
+    margin-bottom:20px;
+    p {
+        font-size:15px;
+        margin-bottom:0;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height:17px;
+    }
+    .date {
+        color:@blue;
+        padding-bottom:7px;
+        border-bottom:1px solid #ffffff;
+        margin-bottom:7px;
+    }
+    .title {
+        font-weight:700;
+        color:#ffffff;
+    }
+    .preacher {
+        color:#ffffff;
+    }
+    .row {
+        margin:0;
+    }
+    .col-sm-8, .col-sm-4 {
+        padding:0;
+    }
+    .inner {
+        padding:60px 50px 0;
+        height:192px;
+    }
+    .audiojs {
+        background:@blueMedium;
+        padding:15px;
+        box-shadow:none;
+        width:100%;
+        height:55px;
+        .play-pause {
+            border:0;
+            height:25px;
+            width:30px;
+            i {
+                color:#ffffff;
+                font-size:20px;
+                &:hover, &:focus, &:active {
+                    color:#dddddd;
+                    cursor:pointer;
+                }
+            }
+            .play, .pause, .error, .loading {
+                background:none;
+            }
+        }
+        .scrubber {
+            background:@blueDark;
+            height:7px;
+            border:none;
+            width:50%;
+            .progress {
+                background:#ffffff;
+                .border-radius(0);
+                &:hover {
+                    cursor:pointer;
+                }
+            }
+            .loaded {
+                background:@blueDarker;
+                &:hover {
+                    cursor:pointer;
+                }
+            }
+        }
+        .time {
+            border:none;
+            text-shadow:none;
+            .univers;
+            letter-spacing: 2px;
+            font-size:16px;
+            line-height:28px;
+            position:absolute;
+            right:10px;
+        }
+        .error-message {
+            width:60%;
+            .alegreya;
+            text-transform:uppercase;
+            letter-spacing: 2px;
+            line-height:28px;
+        }
+    }
+    img {
+        width:100%;
+    }
+}
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main {
+}
+
+/* Gallery Shortcode */
+.gallery-row {
+  padding: 15px 0;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+}
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header {
+}
+
+.hentry time {
+}
+
+.hentry .byline {
+}
+
+.hentry .entry-content {
+}
+
+.hentry footer {
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+figure.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (min-width: 768px) {
+    .navbar {
+        .navbar-toggle {
+            height:87px;
+            width:87px;
+            padding:30px;
+        }
+        .navbar-brand {
+            padding:24px 0;
+            h1 {
+                font-size:36px;
+            }
+        }
+    }
+    #home {
+        .block {
+            height:320px;
+            &.visit {
+                padding:100px 0;
+            }
+            &.jesus_changes {
+                padding:85px 0;
+            }
+        }
+        .differently {
+            padding:50px 0;
+        }
+        .night_format {
+            padding:50px 0;
+            .time {
+                font-size:22px;
+                span {
+                    font-size:15px;
+                }
+            }
+            .col-sm-2 {
+                width: 20%;
+                margin-bottom:30px;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        display: block;
+        height: 100%;
+        max-width: 1600px;
+        line-height: 1;
+        position: relative;
+        left: 50%;
+        top: 0;
+        margin-left: -800px;
+    }
+    #home {
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+            height:680px;
+            margin-left:-650px;
+        }
+        .block {
+            height:340px;
+            padding:120px 0;
+            &.visit {
+                padding:110px 0;
+            }
+            &.jesus_changes {
+                padding:100px 0;
+            }
+        }
+        .different_features {
+            .block {
+                padding:50px;
+            }
+        }
+        .night_format {
+            .time {
+                font-size:24px;
+                span {
+                    font-size:16px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 1200px) {
+    #home {
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+            height:800px;
+            margin-left:-800px;
+        }
+        .block {
+            height:400px;
+            padding:120px 0;
+            &.visit {
+                padding:145px 0;
+            }
+            &.jesus_changes {
+                padding:120px 0;
+            }
+        }
+        .different_features {
+            .block {
+                padding:70px;
+            }
+        }
+    }
+}
