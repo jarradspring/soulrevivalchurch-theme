@@ -4,8 +4,8 @@ audiojs.events.ready(function() {
 
 var feed = new Instafeed({
     get: 'user',
-    userId:498364485,
-    accessToken:'498364485.467ede5.17525d9871614dc3ab75d0e907f8562b',
+    userId:322924360,
+    accessToken:'322924360.467ede5.4f597132b6874faaaf9f6d0862e5f762',
     clientId: '10a55c42a1fd4e4e8ede5263d4b06a6b',
 
 //    template: '<div class="image"><a href="{{link}}"><img src="{{image}}" /></a></div>',
