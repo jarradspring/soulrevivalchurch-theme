@@ -29,7 +29,7 @@
 	if ( (function_exists( 'of_get_option' ) && (of_get_option('footercode1', true) != 1) ) ) {
 			 	echo of_get_option('footercode1', true); } ?>
 
-<script src="<?php bloginfo('template_directory'); ?>/js/instagram.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/instafeed.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 <?php wp_footer(); ?>
 </body>

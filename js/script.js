@@ -2,48 +2,23 @@ audiojs.events.ready(function() {
     var as = audiojs.createAll();
 });
 
-/*jQuery(document).ready(function() {
-    var clientId = '[498364485]';
-    jQuery(".instagram.tag").instagram({
-        hash: 'sport',
-        show: 10,
-        clientId: clientId
-    });
-});*/
+var feed = new Instafeed({
+    get: 'user',
+    userId:498364485,
+    accessToken:'498364485.467ede5.17525d9871614dc3ab75d0e907f8562b',
+    clientId: '10a55c42a1fd4e4e8ede5263d4b06a6b',
 
-
-function createPhotoElement(photo) {
-    var innerHtml = jQuery('<img>')
-        .addClass('instagram-image')
-        .attr('src', photo.images.standard_resolution.url);
-
-    innerHtml = jQuery('<a>')
-        .attr('target', '_blank')
-        .attr('href', photo.link)
-        .append(innerHtml);
-
-    return jQuery('<div>')
-        .addClass('col-sm-2 instagram-placeholder')
-        .attr('id', photo.id)
-        .append(innerHtml);
-}
-
-function didLoadInstagram(event, response) {
-    var that = this;
-
-    jQuery.each(response.data, function(i, photo) {
-        jQuery(that).append(createPhotoElement(photo));
-    });
-}
-
-jQuery(document).ready(function() {
-    var clientId = 'baee48560b984845974f6b85a07bf7d9';
-
-    jQuery('.instagram.tag').on('didLoadInstagram', didLoadInstagram);
-    jQuery('.instagram.tag').instagram({
-        hash: 'sun',
-        count: 13,
-        clientId: clientId
-    });
-
+//    template: '<div class="image"><a href="{{link}}"><img src="{{image}}" /></a></div>',
+    success:instaResponse
 });
+feed.run();
+
+function instaResponse(data)
+{
+    console.log(data.data);
+    var instaData = data.data;
+    jQuery.each(instaData, function(i, photo) {
+        jQuery('#image' + i).html('<a href="'+instaData[i].link+'" target="_blank"><img src="'+instaData[i].images.standard_resolution.url+'"></a>');
+
+    });
+}

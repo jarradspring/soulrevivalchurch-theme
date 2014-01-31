@@ -124,8 +124,19 @@ get_header(); ?>
                 <p class="large_bree">happening</p>
                 <p class="small_text">in our community?</p>
             </div>
-            <div class="instagram tag"></div>
-
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="empty"></div>
+                    <div id="image0" class="image"></div>
+                </div>
+                <div class="col-sm-1">
+                    <div id="image1" class="image"></div>
+                    <div class="empty"></div>
+                </div>
+                <div class="col-sm-2">
+                    <div id="image2" class="image large"></div>
+                </div>
+            </div>
         </div>
     </div>
 
