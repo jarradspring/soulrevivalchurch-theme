@@ -125,16 +125,68 @@ get_header(); ?>
                 <p class="small_text">in our community?</p>
             </div>
             <div class="row">
-                <div class="col-sm-1">
-                    <div class="empty"></div>
-                    <div id="image0" class="image"></div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="empty"></div>
+                            <div id="image0" class="image"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="image1" class="image large"></div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div id="image9" class="image"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="empty"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="empty"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="image10" class="image"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div id="image2" class="image"></div>
+                            <div class="empty"></div>
+                            <div id="image11" class="image"></div>
+                            <div class="empty"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-1">
-                    <div id="image1" class="image"></div>
-                    <div class="empty"></div>
-                </div>
-                <div class="col-sm-2">
-                    <div id="image2" class="image large"></div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="empty"></div>
+                                    <div id="image3" class="image"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="image4" class="image"></div>
+                                    <div id="image5" class="image"></div>
+                                </div>
+                            </div>
+                            <div id="image12" class="image large"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div id="image6" class="image"></div>
+                                    <div class="empty"></div>
+                                    <div id="image13" class="image"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="empty"></div>
+                                    <div id="image7" class="image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -160,11 +160,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .btn.blue {
-     .btnColour(@blue);
-     &:hover, &:focus, &:active {
-         .btnColour(@blueMedium);
-     }
- }
+    .btnColour(@blue);
+    &:hover, &:focus, &:active {
+        .btnColour(@blueMedium);
+    }
+}
 .btn.blueMedium {
     .btnColour(@blueMedium);
     &:hover, &:focus, &:active {
@@ -493,15 +493,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     .instagram_feed {
         padding:30px 0;
+        .blockPadding;
         .large_bree {
             margin-top:-20px;
             color:@blue;
         }
-        .empty {
-            height:60px;
+        .col-sm-1 {
+            width:12.5%;
         }
-        .image.large {
-            height:200px;
+        .col-sm-2 {
+            width:25%;
         }
         .image {
             img {
@@ -741,7 +742,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gallery Shortcode */
 .gallery-row {
-  padding: 15px 0;
+    padding: 15px 0;
 }
 
 /* ==========================================================================
@@ -783,21 +784,21 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .aligncenter {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .alignleft {
-  float: left;
+    float: left;
 }
 
 .alignright {
-  float: right;
+    float: right;
 }
 
 figure.alignnone {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* ==========================================================================
@@ -843,6 +844,13 @@ figure.alignnone {
                 margin-bottom:30px;
             }
         }
+        .instagram_feed {
+            padding:60px 0;
+            background:@bgGrey;
+            .empty {
+                height:90px;
+            }
+        }
     }
 }
 @media (min-width: 992px) {
@@ -884,6 +892,11 @@ figure.alignnone {
                 }
             }
         }
+        .instagram_feed {
+            .empty {
+                height:118px;
+            }
+        }
     }
 
 }
@@ -906,6 +919,11 @@ figure.alignnone {
         .different_features {
             .block {
                 padding:70px;
+            }
+        }
+        .instagram_feed {
+            .empty {
+                height:143px;
             }
         }
     }
