@@ -1,7 +1,3 @@
-/*!
- * Roots 6.5.1
- */
-
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -25,6 +21,9 @@
         padding-left:0;
     }
 }
+/*div[class^="col-"] {
+    .transition(all 0.2s ease);
+}*/
 @font-face {
     font-family: 'Univers';
     src: url('../fonts/universltstd-ultracn-webfont.eot');
@@ -61,12 +60,13 @@
 }
 .large_bree {
     .bree;
-    font-size:70px;
-    line-height:70px;
+    font-size:50px;
+    line-height:50px;
 }
 body, input, select, button {
     .alegreya;
     color:@textGrey;
+    font-size:16px;
 }
 h1, h2, h3, h4, h5, h6 {
     .alegreya;
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 //Buttons
 .btn {
-    padding:8px 30px;
+    padding:10px 40px;
     .alegreya;
     font-size:16px;
     font-weight:700;
@@ -118,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
         .btnColour(@bgGrey);
         color:#ffffff;
         .transition(all 0.3s ease);
+    }
+    &.btn-block {
+        padding-left:0;
+        padding-right:0;
     }
 }
 .btn.grey {
@@ -214,6 +218,37 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+//FORM ELEMENTS ---------------------------------------------------------------------
+div#placeholder {
+    color:#eeeeee;
+}
+
+
+.form-control {
+    .border-radius(0);
+    background:transparent;
+    border:2px solid @orangeDark;
+    color:@orangeDark;
+    &:focus {
+        border-color: @orangeDarker;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(168, 98, 72, 0.60);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(168, 98, 72, 0.60);
+    }
+}
+.form_icon_group {
+    position: relative;
+    .form-control {
+        padding-left:35px;
+    }
+    .fa {
+        color:@orangeDark;
+        position:absolute;
+        top:9px;
+        left:15px;
+    }
+}
+
 .navbar {
     background:#ffffff;
     border:0;
@@ -224,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-brand {
         float:none;
         padding:15px 0;
-        margin:0;
+        margin:0 0 0 0;
         display:block;
         text-align:center;
         width:100%;
@@ -242,6 +277,7 @@ h1, h2, h3, h4, h5, h6 {
             margin:0;
             font-size:25px;
             color:#6d6d6d;
+            display:block !important;
             span {
                 color:#898989;
             }
@@ -368,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .differently {
-        background:@bgGrey;
+        background:#f8f8f8;
         padding:30px 20px;
         .small_text {
             font-size:15px;
@@ -493,6 +529,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     .instagram_feed {
         padding:30px 0;
+        background:#f8f8f8;
+        text-align:center;
+        .row.instagram_section {
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+        .top {
+            margin-bottom:20px;
+        }
         .blockPadding;
         .large_bree {
             margin-top:-20px;
@@ -514,102 +559,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.jesus_container {
-    div[class^="col-sm-"] {
-    }
-    .item {
-        text-align: center;
-        margin:0 -15px;
-        p {
-            font-size:16px;
-            line-height:25px;
-            color:#ffffff;
-        }
-        h1, h2, h3 {
-            .bree;
-            color:#ffffff;
-            span {
-                .alegreya;
-                font-size:16px;
-                text-transform:uppercase;
-                letter-spacing:4px;
-                color:@textGrey;
-                display:block;
-            }
-        }
-        .btn {
-            display:block;
-            width:200px;
-            margin:15px auto 0;
-        }
-        h1 {
-            font-size:70px;
-            line-height:35px;
-            margin-bottom:40px;
-            margin-top:0;
-        }
-        h2 {
-            font-size:70px;
-            line-height:35px;
-            margin-bottom:40px;
-            margin-top:0;
-        }
-        h3 {
-            font-size:50px;
-            line-height:35px;
-            margin-bottom:40px;
-            margin-top:0
-        }
-        &.jesus_main {
-            background:@yellow;
-            padding:80px 0;
-            p {
-                width:450px;
-                margin: 0 auto 10px;
-            }
-        }
-        &.love_god {
-            background:@yellowMedium;
-            padding:40px 0;
-            p {
-                width:350px;
-                margin: 0 auto 10px;
-            }
-        }
-        &.love_others {
-            background:@yellowDark;
-            padding:40px 0;
-            p {
-                width:350px;
-                margin: 0 auto 10px;
-            }
-        }
-    }
-    .changes_lives {
-        .title {
-            background:@yellowMedium;
-            padding:20px 10px;
-            h3 {
-                margin-bottom:10px;
-                .univers;
-                font-weight:normal;
-                text-transform:uppercase;
-                font-size:48px;
-                letter-spacing:2px;
-            }
-        }
-        .links {
-            background:@yellowDark;
-        }
-        .image {
-            img {
-                width:100%;
-                height:auto;
-            }
-        }
-    }
-}
-
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -618,8 +567,381 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background:#cccccc;
+    padding:30px 0;
+    clear:both;
+    .footer_links {
+        clear:both;
+        .group {
+            text-align: center;
+            a {
+                color:@textGrey;
+                font-size:14px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                display:block;
+                margin-bottom:5px;
+                font-weight:700;
+            }
+        }
+    }
+    .follow_us {
+        text-align:center;
+        p {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size:13px;
+            margin-bottom:5px;
+            text-align:center;
+        }
+        a {
+            display:inline-block;
+            text-align:center;
+            height:35px;
+            width:35px;
+            padding:9px;
+            margin:0 2px;
+            background:#ffffff;
+            &.facebook {
+                background:#3B5998;
+                &:hover {
+                    background: #32477c;
+                }
+            }
+            &.twitter {
+                background:#4099FF;
+                &:hover {
+                    background: #357cd1;
+                }
+            }
+            &.instagram {
+                background:#517fa4;
+                &:hover {
+                    background: #446688;
+                }
+            }
+            i {
+                color:@bgGrey;
+                font-size:18px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Jesus
+   ========================================================================== */
+
+#jesus {
+    .block {
+        text-align:center;
+        .large_bree {
+            color:#ffffff;
+            margin-top:-10px;
+            margin-bottom:20px;
+        }
+        p {
+            color:#ffffff;
+        }
+        .btn {
+            width:200px;
+        }
+    }
+    .block.primary {
+        background:@yellow;
+        padding:0px 20px;
+        .inner.changes_everything {
+            padding:80px 0;
+        }
+        .changes_lives {
+            margin:0 -20px;
+            .small_text {
+                display:block;
+            }
+            .title {
+                background:@yellowMedium;
+                padding:20px 10px;
+                .large_text {
+                    color:#ffffff;
+                }
+                .inner {
+                    width:260px;
+                }
+            }
+            .links {
+                background:@yellowDark;
+                padding:30px 20px;
+                .small_text {
+                    color:#ffffff;
+                    margin-bottom:20px;
+                    &.most_recent {
+                        color:@yellow;
+                        border-bottom:1px solid #ffffff;
+                        padding-bottom:5px;
+                        margin-bottom:5px;
+                    }
+                }
+            }
+            .image {
+                display:none;
+            }
+        }
+    }
+    .love_god {
+        background:@yellowMedium;
+        padding:45px 20px;
+    }
+    .love_others {
+        background:@yellowDark;
+        padding:45px 20px;
+        .btn {
+            margin-bottom:20px;
+        }
+    }
+    .inner {
+        margin:0 auto;
+    }
+
+}
+/* ==========================================================================
+   Whats On
+   ========================================================================== */
+#whatson {
+    .block {
+        text-align:center;
+        padding:70px 10px;
+        .large_bree {
+            color:#ffffff;
+        }
+        p {
+            color:#ffffff;
+            margin-bottom:20px;
+        }
+        .inner {
+            width:260px;
+            margin:0 auto;
+        }
+    }
+    .recent {
+        text-align:center;
+        .links {
+            background:@bgGrey;
+            padding:30px 20px;
+            .small_text {
+                display:block;
+                color:@blue;
+                margin-bottom:0px;
+                &.most_recent {
+                    color:@blueDark;
+                    border-bottom:1px solid @blueDark;
+                    padding-bottom:5px;
+                    margin-bottom:10px;
+                }
+                &.title {
+                    font-weight:700;
+                }
+                &.date {
+                    font-weight:700;
+                }
+                &.preacher {
+                    margin-bottom:20px;
+                }
+            }
+        }
+        .image {
+            display:none;
+        }
+    }
+    .groups {
+        background:@blue;
+        .small_text {
+            margin-top:-5px;
+            color:@blueDark;
+            margin-bottom:30px;
+            display:inline-block;
+        }
+        ul {
+            li {
+                a {
+                    padding:12px 0;
+                    border-bottom:1px solid #ffffff;
+                    display:block;
+                    .small_text {
+                        width:150px;
+                        color:#ffffff;
+                        margin:0 auto;
+                        display:inline-block;
+                    }
+                    &:hover {
+                        text-decoration:none;
+                        .small_text {
+                            color:#cccccc;
+                        }
+                    }
+                }
+                &:last-child {
+                    a {
+                        border-bottom:0;
+                    }
+                }
+            }
+        }
+    }
+    .sermons {
+        background:@blueMedium;
+    }
+    .whats_on {
+        background:@blueDark;
+    }
+}
+ul.list_groups {
+    li {
+        a {
+            padding:12px 0;
+            border-bottom:1px solid #ffffff;
+            display:block;
+            .small_text {
+                width:150px;
+                color:#ffffff;
+                margin:0 auto;
+                display:inline-block;
+            }
+            &:hover {
+                text-decoration:none;
+                .small_text {
+                    color:#cccccc;
+                }
+            }
+        }
+        &:last-child {
+            a {
+                border-bottom:0;
+            }
+        }
+    }
+}
+#stories {
+    .page_header {
+        background:@yellow;
+    }
+    .story {
+        text-align:center;
+        margin-bottom:15px;
+        .info {
+            background:@yellow;
+            text-align:center;
+            padding:55px;
+            height:180px;
+            display:block;
+            color:#ffffff;
+            &:hover {
+                background:@yellowMedium;
+                text-decoration:none;
+            }
+            .inner {
+                display:block;
+                color:#ffffff;
+                &:hover {
+                    text-decoration:none;
+                    span {
+                    }
+                }
+
+                .small_text {
+                    color:@textGrey;
+                    margin-bottom:0;
+                    display:block;
+                }
+                .large_text {
+                    font-size:30px;
+                    line-height:30px;
+                }
+            }
+        }
+        .image {
+            display:none;
+            position:absolute;
+            right:0;
+            top:0;
+            a {
+                display:block;
+            }
+        }
+    }
+}
+#give {
+    .page_header {
+        margin-bottom:0;
+        h2 {
+            color:@orange;
+            margin-bottom:0;
+        }
+        .small_text {
+            color:@orangeMedium;
+            margin-bottom:25px;
+        }
+        .page_description {
+            color:@textGrey;
+            margin-bottom:20px;
+        }
+    }
+    .section {
+        padding:60px 0;
+        text-align: center;
+        color:#ffffff;
+        &#pray {
+            background:@orange;
+        }
+        &#donate {
+            background:@orangeMedium;
+            .give_options {
+                .large_text {
+                    font-size:24px;
+                }
+            }
+        }
+        &#serve {
+            background:@orangeDark;
+        }
+        .inner {
+            margin:0 auto;
+            width:260px;
+            h2 {
+                font-size:36px;
+            }
+
+        }
+    }
+}
+/* ==========================================================================
    Content
    ========================================================================== */
+.page_header {
+    padding:60px 0;
+    background:@bgGrey;
+    text-align: center;
+    margin-bottom:20px;
+    .inner {
+        margin:0 auto;
+        width:260px;
+    }
+    .small_text {
+        color:@textGrey;
+        margin-bottom:0;
+        display: block;
+    }
+    .large_text {
+        color:#ffffff;
+        margin-top:0;
+        margin-bottom:25px;
+    }
+    .page_description {
+        color:#ffffff;
+    }
+}
 
 .content {
 }
@@ -804,127 +1126,6 @@ figure.alignnone {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media (min-width: 768px) {
-    .navbar {
-        .navbar-toggle {
-            height:87px;
-            width:87px;
-            padding:30px;
-        }
-        .navbar-brand {
-            padding:24px 0;
-            h1 {
-                font-size:36px;
-            }
-        }
-    }
-    #home {
-        .block {
-            height:320px;
-            &.visit {
-                padding:100px 0;
-            }
-            &.jesus_changes {
-                padding:85px 0;
-            }
-        }
-        .differently {
-            padding:50px 0;
-        }
-        .night_format {
-            padding:50px 0;
-            .time {
-                font-size:22px;
-                span {
-                    font-size:15px;
-                }
-            }
-            .col-sm-2 {
-                width: 20%;
-                margin-bottom:30px;
-            }
-        }
-        .instagram_feed {
-            padding:60px 0;
-            background:@bgGrey;
-            .empty {
-                height:90px;
-            }
-        }
-    }
-}
-@media (min-width: 992px) {
-    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-        display: block;
-        height: 100%;
-        max-width: 1600px;
-        line-height: 1;
-        position: relative;
-        left: 50%;
-        top: 0;
-        margin-left: -800px;
-    }
-    #home {
-        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-            height:680px;
-            margin-left:-650px;
-        }
-        .block {
-            height:340px;
-            padding:120px 0;
-            &.visit {
-                padding:110px 0;
-            }
-            &.jesus_changes {
-                padding:100px 0;
-            }
-        }
-        .different_features {
-            .block {
-                padding:50px;
-            }
-        }
-        .night_format {
-            .time {
-                font-size:24px;
-                span {
-                    font-size:16px;
-                }
-            }
-        }
-        .instagram_feed {
-            .empty {
-                height:118px;
-            }
-        }
-    }
-
-}
-@media (min-width: 1200px) {
-    #home {
-        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-            height:800px;
-            margin-left:-800px;
-        }
-        .block {
-            height:400px;
-            padding:120px 0;
-            &.visit {
-                padding:145px 0;
-            }
-            &.jesus_changes {
-                padding:120px 0;
-            }
-        }
-        .different_features {
-            .block {
-                padding:70px;
-            }
-        }
-        .instagram_feed {
-            .empty {
-                height:143px;
-            }
-        }
-    }
-}
+@import 'style-sm';
+@import 'style-md';
+@import 'style-lg';

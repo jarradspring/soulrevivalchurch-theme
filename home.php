@@ -119,12 +119,12 @@ get_header(); ?>
     </div>
     <div class="section instagram_feed">
         <div class="container">
-            <div class="text-center">
+            <div class="top text-center">
                 <p class="small_text">So what's been</p>
                 <p class="large_bree">happening</p>
                 <p class="small_text">in our community?</p>
             </div>
-            <div class="row">
+            <div class="row instagram_section">
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-3">
@@ -189,6 +189,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            <a class="btn blue" href="/whats-on">See More</a>
         </div>
     </div>
 
