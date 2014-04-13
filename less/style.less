@@ -56,12 +56,12 @@
     .univers;
     letter-spacing:2px;
     font-size:48px;
-    line-height:48px;
+    line-height:1;
 }
 .large_bree {
     .bree;
     font-size:50px;
-    line-height:50px;
+    line-height:1;
 }
 body, input, select, button {
     .alegreya;
@@ -222,18 +222,19 @@ h1, h2, h3, h4, h5, h6 {
 div#placeholder {
     color:#eeeeee;
 }
-
+label {
+    .small_text;
+}
 
 .form-control {
     .border-radius(0);
     background:transparent;
-    border:2px solid @orangeDark;
-    color:@orangeDark;
+    border:2px solid #cccccc;
+    color:@textGrey;
     &:focus {
-        border-color: @orangeDarker;
+        border-color: #aaaaaa;
         outline: 0;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(168, 98, 72, 0.60);
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(168, 98, 72, 0.60);
+        box-shadow:none;
     }
 }
 .form_icon_group {
@@ -894,6 +895,13 @@ ul.list_groups {
             color:@textGrey;
             margin-bottom:20px;
         }
+        .btn-group {
+            .btn {
+                display:block;
+                margin-bottom:10px;
+                float:none;
+            }
+        }
     }
     .section {
         padding:60px 0;
@@ -901,10 +909,19 @@ ul.list_groups {
         color:#ffffff;
         &#pray {
             background:@orange;
+            .form-control {
+                border-color:@orangeMedium;
+                &:focus {
+                    border-color:@orangeDarker;
+                }
+            }
         }
         &#donate {
             background:@orangeMedium;
             .give_options {
+                .col-sm-4 {
+                    margin-bottom:30px;
+                }
                 .large_text {
                     font-size:24px;
                 }
@@ -912,6 +929,26 @@ ul.list_groups {
         }
         &#serve {
             background:@orangeDark;
+            .service_options {
+                .col-sm-6 {
+                    margin-bottom:50px;
+                }
+                .large_text {
+                    font-size:32px;
+                    color:@orange;
+                }
+                .large_bree {
+                    font-size:24px;
+                    margin-bottom:20px;
+                }
+                ul.list_groups {
+                    li {
+                        a {
+                            border-bottom-color:@orange;
+                        }
+                    }
+                }
+            }
         }
         .inner {
             margin:0 auto;
@@ -921,6 +958,80 @@ ul.list_groups {
             }
 
         }
+    }
+}
+#berea {
+    .page_header {
+        margin-bottom:0;
+        background:@green;
+        .large_text {
+            margin-bottom:5px;
+        }
+        .small_text {
+            color:#ffffff;
+            margin-bottom:25px;
+        }
+    }
+    .section {
+        background:@bgGrey;
+        .large_text {
+            font-size:32px;
+            color:@green;
+        }
+        &#pathways {
+            text-align:center;
+        }
+    }
+    #pathwayOptions {
+        .item {
+            padding:50px;
+            text-align:center;
+            .large_text {
+                font-size:32px;
+                color:#FFFFFF;
+                margin-bottom:0;
+            }
+            .small_text {
+                color:@bgGrey;
+                margin-bottom:30px;
+            }
+            .btn {
+                color:@green;
+                &:hover {
+                    .btnColour(@bgGrey - #111);
+                    color:@greenMedium;
+                }
+            }
+            &.youth {
+                background:@green;
+            }
+            &.foundations {
+                background:@greenMedium;
+            }
+            &.pastors {
+                background:@greenDark;
+            }
+            &.ministry {
+                background:@greenDarker;
+            }
+        }
+    }
+}
+#contact {
+    .top_block {
+        .large_bree {
+            color:#ffffff;
+        }
+        .small_text {
+            color:@greenDark;
+        }
+    }
+    .contact_our_team {
+        background:@green;
+
+    }
+    .meet_our_team {
+        background:@greenMedium;
     }
 }
 /* ==========================================================================
@@ -1133,6 +1244,469 @@ figure.alignnone {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@import 'style-sm';
+/*@import 'style-sm';
 @import 'style-md';
-@import 'style-lg';
+@import 'style-lg';*/
+@media (min-width: 768px) {
+    .large_bree {
+        .bree;
+        font-size:70px;
+    }
+    .navbar {
+        .navbar-toggle {
+            height:87px;
+            width:87px;
+            padding:30px;
+        }
+        .navbar-brand {
+            padding:24px 0;
+            margin:0 0 0 -85px;
+            h1 {
+                font-size:36px;
+            }
+        }
+    }
+    .page_header {
+        margin-bottom:50px;
+    }
+    #home {
+        .block {
+            height:320px;
+            &.visit {
+                padding:100px 0;
+            }
+            &.jesus_changes {
+                padding:85px 0;
+            }
+        }
+        .differently {
+            padding:50px 0;
+        }
+        .night_format {
+            padding:50px 0;
+            .time {
+                font-size:22px;
+                span {
+                    font-size:15px;
+                }
+            }
+            .col-sm-2 {
+                width: 20%;
+                margin-bottom:30px;
+            }
+        }
+        .instagram_feed {
+            padding:60px 0;
+            .row.instagram_section {
+                margin-top:50px;
+                margin-bottom:50px;
+            }
+            .header {
+                margin-bottom:50px;
+            }
+            .empty {
+                height:90px;
+            }
+        }
+    }
+    .site-footer {
+        .footer_links {
+            .group {
+                float:left;
+                margin-right:50px;
+                text-align:left;
+                a {
+
+                }
+            }
+        }
+        .follow_us {
+            float:right;
+        }
+    }
+    #jesus {
+        .block.primary {
+            .inner {
+                width:450px;
+            }
+            .changes_lives {
+                .title {
+                    .inner {
+                        width:260px;
+                    }
+                }
+                .links {
+                    background:@bgGrey;
+                    .small_text {
+                        color:@textGrey;
+                        &.most_recent {
+                            color:@yellowMedium;
+                            border-bottom:1px solid @yellowDark;
+                        }
+                    }
+                }
+            }
+
+        }
+        .love_god {
+            padding:60px 20px;
+            height:420px;
+        }
+        .love_others {
+            height:420px;
+        }
+        .block {
+            .inner {
+                width:285px;
+                margin:0 auto;
+            }
+        }
+
+    }
+    #whatson {
+        .block {
+            .inner {
+                width:270px;
+                margin:0 auto;
+            }
+        }
+        .sermons {
+            height:430px;
+        }
+        .whats_on {
+            background:@blueDark;
+            height:430px;
+            .inner {
+                width:320px;
+            }
+        }
+        .recent {
+
+            .links {
+                background:@blueDark;
+                height:220px;
+                .small_text {
+                    display:block;
+                    color:#ffffff;
+                    margin-bottom:0px;
+                    &.most_recent {
+                        color:@blue;
+                        border-bottom:1px solid #ffffff;
+                        padding-bottom:5px;
+                        margin-bottom:10px;
+                    }
+                    &.title {
+                        font-weight:700;
+                        margin-bottom:0;
+                    }
+                    &.date {
+                        font-weight:700;
+                    }
+                    &.preacher {
+                        margin-bottom:20px;
+                    }
+                }
+            }
+            &.upcoming_events {
+                .links {
+                    background:@blueMedium;
+                    .small_text {
+                        &.most_recent {
+                            color:#ffffff;
+                        }
+                        &.date {
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #stories {
+        .story {
+            overflow:hidden;
+            margin-bottom:30px;
+            .info {
+                padding-left:15px;
+                padding-right:180px;
+            }
+            .image {
+                width:180px;
+                overflow:hidden;
+                display:block;
+                margin-right:15px;
+                img {
+                    position:relative;
+                    left:50%;
+                    margin-left:-170px;
+                }
+            }
+        }
+    }
+    #give {
+        .page_header {
+            margin-bottom:0;
+            .inner {
+                width:425px;
+            }
+            .btn-group {
+                .btn {
+                    display:block;
+                    margin-bottom:10px;
+                    float:left;
+                }
+            }
+        }
+        .section {
+            padding:60px 0;
+            text-align: center;
+            .inner {
+                margin:0 auto;
+                width:425px;
+            }
+        }
+        .service_options {
+            ul.list_groups {
+                width:300px;
+                margin:0 auto;
+                li {
+                    a {
+                        span {
+                            width:270px;
+                            strong {
+                                display:block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #berea {
+        .inner {
+            width:500px;
+            margin:0 auto;
+            padding:40px 0;
+            text-align: center;
+        }
+        .section {
+            .large_text {
+                margin-bottom:20px;
+            }
+        }
+        #pathwayOptions {
+            .item {
+                padding:90px 0 0;
+                text-align:center;
+                min-height:300px;
+            }
+        }
+    }
+    #contact {
+        .top_block {
+            .large_bree {
+                margin-top:0;
+                font-size:70px;
+            }
+            .small_text {
+                color:@greenDark;
+                margin-bottom:30px;
+            }
+            .inner {
+                text-align:center;
+                width:400px;
+                margin:0 auto;
+                padding:60px 0;
+            }
+        }
+        .contact_our_team {
+            background:@green;
+
+        }
+        .meet_our_team {
+            background:@greenMedium;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        display: block;
+        height: 100%;
+        max-width: 1600px;
+        line-height: 1;
+        position: relative;
+        left: 50%;
+        top: 0;
+        margin-left: -800px;
+    }
+    #home {
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+            height:680px;
+            margin-left:-650px;
+        }
+        .block {
+            height:340px;
+            padding:120px 0;
+            &.visit {
+                padding:110px 0;
+            }
+            &.jesus_changes {
+                padding:100px 0;
+            }
+        }
+        .different_features {
+            .block {
+                padding:50px;
+            }
+        }
+        .night_format {
+            .time {
+                font-size:24px;
+                span {
+                    font-size:16px;
+                }
+            }
+        }
+        .instagram_feed {
+            .empty {
+                height:118px;
+            }
+        }
+    }
+    #jesus {
+        .block.primary {
+            .inner.changes_everything {
+                padding:113px 10px;
+            }
+            .changes_lives {
+
+                .title {
+                    height:240px;
+                    padding:55px 10px;
+                }
+                .links {
+                    background:@yellowDark;
+                    height:240px;
+                    padding:60px 180px 60px 20px;
+                    .small_text {
+                        color:#ffffff;
+                        margin-bottom:20px;
+                        &.most_recent {
+                            color:@yellow;
+                            border-bottom:1px solid #ffffff;
+                            padding-bottom:5px;
+                            margin-bottom:5px;
+                        }
+                    }
+                    .btn {
+                        width:100%;
+                        max-width:200px;
+                    }
+                }
+                .image {
+                    display:block;
+                    position:absolute;
+                    right:0;
+                    top:0;
+                }
+            }
+        }
+    }
+    #whatson {
+        .sermons {
+            height:484px;
+        }
+        .whats_on {
+            height:484px;
+        }
+        .recent {
+            position:relative;
+            .links {
+                background:@blueDark;
+                height:240px;
+                padding:50px 180px 50px 20px;
+                .small_text {
+                    color:#ffffff;
+                    margin-bottom:20px;
+                    &.most_recent {
+                        color:@blue;
+                        border-bottom:1px solid #ffffff;
+                        padding-bottom:5px;
+                        margin-bottom:5px;
+                    }
+                }
+                .btn {
+                    width:100%;
+                    max-width:200px;
+                }
+            }
+            .image {
+                display:block;
+                position:absolute;
+                right:0;
+                top:0;
+            }
+        }
+    }
+    #stories {
+        .story {
+            .info {
+                padding-left:15px;
+                padding-right:320px;
+            }
+            .image {
+                width:320px;
+                overflow:hidden;
+                display:block;
+                margin-right:15px;
+                img {
+                    position:relative;
+                    left:50%;
+                    margin-left:-320px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #home {
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+            height:800px;
+            margin-left:-800px;
+        }
+        .block {
+            height:400px;
+            padding:120px 0;
+            &.visit {
+                padding:145px 0;
+            }
+            &.jesus_changes {
+                padding:120px 0;
+            }
+        }
+        .different_features {
+            .block {
+                padding:70px;
+            }
+        }
+        .instagram_feed {
+            .empty {
+                height:143px;
+            }
+        }
+    }
+    #jesus {
+        .block.primary {
+            .changes_lives {
+                .title {
+                }
+                .links {
+                }
+            }
+        }
+    }
+}

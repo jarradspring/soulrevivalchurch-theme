@@ -129,7 +129,9 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
             <div class="row service_options">
-                <div class="col-sm-6">
+                <div class="col-md-2 hidden-sm hidden-xs"></div>
+                <div class="col-sm-6 col-md-4">
+                    <h4 class="large_text">Service Opportunities</h4>
                     <ul class="list-unstyled list_groups">
                         <?php if( get_field('link_l1') ): ?>
                             <?php while( has_sub_field('link_l1') ): ?>
@@ -143,6 +145,30 @@ get_header(); ?>
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </ul>
+                    <p class="large_bree">Wanna get involved?</p>
+                    <a class="btn orange" href="#">Let us know</a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <h4 class="large_text">Training Opportunities</h4>
+                    <ul class="list-unstyled list_groups">
+                        <li>
+                            <a href="#"><span class="small_text"><strong>Berean Youth Stream</strong>(for High Schoolers)</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+
+                    </ul>
+                    <a class="btn orange" href="#">Find Out More</a>
                 </div>
             </div>
         </div>
