@@ -18,17 +18,17 @@
                     <a href="/index.php/what-to-expect">What to expect</a>
                     <a href="/index.php/contact-us">Contact Us</a>
                 </div>
-                <div class="group">
+                <div class="group small">
                     <a href="/index.php/groups">Groups</a>
                     <a href="/index.php/sermons">Sermons</a>
                     <a href="/index.php/calendar">Calendar</a>
                 </div>
-                <div class="group">
+                <div class="group medium">
                     <a href="/index.php/baptism">Baptism</a>
                     <a href="/index.php/pre-marriage">Pre-Marriage</a>
                     <a href="/index.php/weddings">Weddings</a>
                 </div>
-                <div class="group">
+                <div class="group medium">
                     <a href="/index.php/blog">Blog</a>
                     <a href="/index.php/berea-training">Berea Training</a>
                     <a href="/index.php/give">Give</a>

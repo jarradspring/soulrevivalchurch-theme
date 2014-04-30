@@ -585,6 +585,13 @@ div#placeholder {
                 display:block;
                 margin-bottom:5px;
                 font-weight:700;
+                .transition(all 0.2s ease);
+                &:hover {
+                    padding-left:5px;
+                    .transition(all 0.2s ease);
+                    text-decoration:none;
+                    color:@textGrey - #222;
+                }
             }
         }
     }

@@ -8,10 +8,19 @@ get_header(); ?>
     <div class="page_header">
         <div class="container">
             <div class="inner">
+                <h2 class="large_text"><?php the_field('large_text_b1'); ?></h2>
+                <?php if (get_field('has_small_text_b1') != false):?>
+                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
+                <?php endif; ?>
+                <div class="page_description"><?php the_field('description_b1'); ?></div>
+                <?php if (get_field('has_button_b1') != false):?>
+                    <?php if( get_field('button_b1') ): ?>
+                        <?php while( has_sub_field('button_b1') ): ?>
+                            <a class="btn orange" href="<?php the_sub_field('button_link_b1'); ?>"><?php the_sub_field('button_text_b1'); ?></a>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
 
-                <h2 class="large_text">Become a friend</h2>
-                <span class="small_text">Of Soul Revival Church</span>
-                <p class="page_description">God is doing great work at Soul Revival. We went you to be part of it by becoming a Friend of Soul Revival. Friends of Soul Revival is a network of people. They partner with us in two important ways: by praying for Soul Revival and by giving to Soul Revival, or both. They can also sign up to receive regular news, stories, videos and paryer updates from Soul Revival.</p>
                 <div class="btn-group">
                     <a class="btn orange" href="#pray">Pray</a>
                     <a class="btn orangeMedium" href="#donate">Donate</a>
@@ -23,9 +32,19 @@ get_header(); ?>
     <div class="section" id="pray">
         <div class="container">
             <div class="inner">
-                <h3 class="large_text">Pray</h3>
-                <p>Lorem ipsum </p>
 
+                <h3 class="large_text"><?php the_field('large_text_b2'); ?></h3>
+                <?php if (get_field('has_small_text_b2') != false):?>
+                    <span class="small_text"><?php the_field('small_text_b2'); ?></span>
+                <?php endif; ?>
+                <div class="page_description"><?php the_field('description_b2'); ?></div>
+                <?php if (get_field('has_button_b2') != false):?>
+                    <?php if( get_field('button_b2') ): ?>
+                        <?php while( has_sub_field('button_b2') ): ?>
+                            <a class="btn orangeDark" href="<?php the_sub_field('button_link_b2'); ?>"><?php the_sub_field('button_text_b2'); ?></a>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
                 <form class="mailing_list" action="">
                     <div class="form-group">
                         <label for="" class="small_text">Join the Mailing List</label>
@@ -44,8 +63,18 @@ get_header(); ?>
     <div class="section" id="donate">
         <div class="container">
             <div class="inner">
-                <h3 class="large_text">Donate</h3>
-                <p>Lorem ipsum </p>
+                <h3 class="large_text"><?php the_field('large_text_b3'); ?></h3>
+                <?php if (get_field('has_small_text_b3') != false):?>
+                    <span class="small_text"><?php the_field('small_text_b3'); ?></span>
+                <?php endif; ?>
+                <div class="page_description"><?php the_field('description_b3'); ?></div>
+                <?php if (get_field('has_button_b3') != false):?>
+                    <?php if( get_field('button_b3') ): ?>
+                        <?php while( has_sub_field('button_b3') ): ?>
+                            <a class="btn orangeDark" href="<?php the_sub_field('button_link_b3'); ?>"><?php the_sub_field('button_text_b3'); ?></a>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
             <div class="row give_options">
                 <div class="col-sm-4">
@@ -86,28 +115,33 @@ get_header(); ?>
     <div class="section" id="serve">
         <div class="container">
             <div class="inner">
-                <h3 class="large_text">Serve</h3>
-                <p>Lorem ipsum </p>
+                <h3 class="large_text"><?php the_field('large_text_b4'); ?></h3>
+                <?php if (get_field('has_small_text_b4') != false):?>
+                    <span class="small_text"><?php the_field('small_text_b4'); ?></span>
+                <?php endif; ?>
+                <div class="page_description"><?php the_field('description_b4'); ?></div>
+                <?php if (get_field('has_button_b4') != false):?>
+                    <?php if( get_field('button_b4') ): ?>
+                        <?php while( has_sub_field('button_b4') ): ?>
+                            <a class="btn orange" href="<?php the_sub_field('button_link_b4'); ?>"><?php the_sub_field('button_text_b4'); ?></a>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
             <div class="row service_options">
                 <div class="col-sm-6">
                     <ul class="list-unstyled list_groups">
-                        <li>
-                            <a href="#"><span class="small_text">Our Gatherings</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="small_text">Our Gatherings</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="small_text">Our Gatherings</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="small_text">Our Gatherings</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="small_text">Our Gatherings</span></a>
-                        </li>
-
+                        <?php if( get_field('link_l1') ): ?>
+                            <?php while( has_sub_field('link_l1') ): ?>
+                                <li>
+                                    <?php if (get_sub_field('link_type_l1') == "internal_link"):?>
+                                        <a href="<?php the_sub_field('internal_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
+                                    <?php elseif (get_sub_field('link_type_l1') == "page"):?>
+                                        <a href="<?php the_sub_field('page_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
