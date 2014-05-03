@@ -1195,6 +1195,12 @@ ul.list_groups {
     background:@bgGrey;
     .main {
         margin-bottom:50px;
+        .top {
+            padding:50px 0 20px;
+            .large_text {
+                margin-bottom:0;
+            }
+        }
         .description {
             h3 {
                 .univers;
@@ -1204,6 +1210,18 @@ ul.list_groups {
                 .bree;
                 font-size:20px;
             }
+        }
+    }
+    .page_header {
+        .large_text {
+            margin:0;
+        }
+        .small_text {
+            color:#ffffff;
+            margin-bottom:0;
+        }
+        .page_description {
+            margin:10px 0 0;
         }
     }
     .subsection {
@@ -1232,6 +1250,9 @@ ul.list_groups {
                 .univers;
                 line-height:1;
             }
+            a {
+                color:@red;
+            }
         }
         .subsection {
             &.block1 {
@@ -1242,6 +1263,118 @@ ul.list_groups {
             }
             &.block3 {
                 background:@redDark;
+            }
+        }
+
+    }
+    &.green {
+        .page_header {
+            background:@green;
+        }
+        .main {
+            h2 {
+                color:@green;
+                font-size: 48px;
+                .univers;
+                line-height:1;
+            }
+            a {
+                color:@green;
+            }
+        }
+        .subsection {
+            &.block1 {
+                background:@green;
+            }
+            &.block2 {
+                background:@greenMedium;
+            }
+            &.block3 {
+                background:@greenDark;
+            }
+        }
+
+    }
+    &.blue {
+        .page_header {
+            background:@blue;
+        }
+        .main {
+            h2 {
+                color:@blue;
+                font-size: 48px;
+                .univers;
+                line-height:1;
+            }
+            a {
+                color:@blue;
+            }
+        }
+        .subsection {
+            &.block1 {
+                background:@blue;
+            }
+            &.block2 {
+                background:@blueMedium;
+            }
+            &.block3 {
+                background:@blueDark;
+            }
+        }
+
+    }
+    &.yellow {
+        .page_header {
+            background:@yellow;
+        }
+        .main {
+            h2 {
+                color:@yellow;
+                font-size: 48px;
+                .univers;
+                line-height:1;
+            }
+            a {
+                color:@yellow;
+            }
+        }
+        .subsection {
+            &.block1 {
+                background:@yellow;
+            }
+            &.block2 {
+                background:@yellowMedium;
+            }
+            &.block3 {
+                background:@yellowDark;
+            }
+        }
+
+    }
+    &.orange {
+        .page_header {
+            background:@orange;
+        }
+        .main {
+            h2 {
+                color:@orange;
+                font-size: 48px;
+                .univers;
+                line-height:1;
+            }
+            a {
+                color:@orange;
+            }
+        }
+        .subsection {
+            &.block1 {
+                background:@orange;
+            }
+            &.block2 {
+                background:@orangeMedium;
+            }
+            &.block3 {
+                background:@orangeDark;
             }
         }
 

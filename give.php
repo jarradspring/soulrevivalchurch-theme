@@ -136,10 +136,8 @@ get_header(); ?>
                         <?php if( get_field('link_l1') ): ?>
                             <?php while( has_sub_field('link_l1') ): ?>
                                 <li>
-                                    <?php if (get_sub_field('link_type_l1') == "internal_link"):?>
+                                    <?php if (get_sub_field('link_type_l1') == 'internal_link'):?>
                                         <a href="<?php the_sub_field('internal_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
-                                    <?php elseif (get_sub_field('link_type_l1') == "page"):?>
-                                        <a href="<?php the_sub_field('page_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
                                     <?php endif; ?>
                                 </li>
                             <?php endwhile; ?>

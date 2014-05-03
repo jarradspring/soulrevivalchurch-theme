@@ -1291,6 +1291,12 @@ ul.list_groups li:last-child a {
 .default .main {
   margin-bottom: 50px;
 }
+.default .main .top {
+  padding: 50px 0 20px;
+}
+.default .main .top .large_text {
+  margin-bottom: 0;
+}
 .default .main .description h3 {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -1300,6 +1306,16 @@ ul.list_groups li:last-child a {
 .default .main .description h4 {
   font-family: 'Bree Serif', serif;
   font-size: 20px;
+}
+.default .page_header .large_text {
+  margin: 0;
+}
+.default .page_header .small_text {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.default .page_header .page_description {
+  margin: 10px 0 0;
 }
 .default .subsection {
   padding: 30px 15px;
@@ -1326,6 +1342,9 @@ ul.list_groups li:last-child a {
   text-transform: uppercase;
   line-height: 1;
 }
+.default.red .main a {
+  color: #e8695b;
+}
 .default.red .subsection.block1 {
   background: #e8695b;
 }
@@ -1334,6 +1353,94 @@ ul.list_groups li:last-child a {
 }
 .default.red .subsection.block3 {
   background: #8e3f39;
+}
+.default.green .page_header {
+  background: #0fedc2;
+}
+.default.green .main h2 {
+  color: #0fedc2;
+  font-size: 48px;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.default.green .main a {
+  color: #0fedc2;
+}
+.default.green .subsection.block1 {
+  background: #0fedc2;
+}
+.default.green .subsection.block2 {
+  background: #11d3ae;
+}
+.default.green .subsection.block3 {
+  background: #11ba99;
+}
+.default.blue .page_header {
+  background: #6296f4;
+}
+.default.blue .main h2 {
+  color: #6296f4;
+  font-size: 48px;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.default.blue .main a {
+  color: #6296f4;
+}
+.default.blue .subsection.block1 {
+  background: #6296f4;
+}
+.default.blue .subsection.block2 {
+  background: #5686ce;
+}
+.default.blue .subsection.block3 {
+  background: #4b75b2;
+}
+.default.yellow .page_header {
+  background: #eac159;
+}
+.default.yellow .main h2 {
+  color: #eac159;
+  font-size: 48px;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.default.yellow .main a {
+  color: #eac159;
+}
+.default.yellow .subsection.block1 {
+  background: #eac159;
+}
+.default.yellow .subsection.block2 {
+  background: #cca650;
+}
+.default.yellow .subsection.block3 {
+  background: #a58442;
+}
+.default.orange .page_header {
+  background: #f29764;
+}
+.default.orange .main h2 {
+  color: #f29764;
+  font-size: 48px;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.default.orange .main a {
+  color: #f29764;
+}
+.default.orange .subsection.block1 {
+  background: #f29764;
+}
+.default.orange .subsection.block2 {
+  background: #dd885e;
+}
+.default.orange .subsection.block3 {
+  background: #bc7150;
 }
 .sermons {
   background: #f2f2f2;
