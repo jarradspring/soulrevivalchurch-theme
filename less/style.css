@@ -21,6 +21,7 @@
 .univers {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1;
 }
 .bree {
   font-family: 'Bree Serif', serif;
@@ -371,6 +372,7 @@ label {
 }
 .navbar .navbar-brand h1 {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
@@ -423,6 +425,7 @@ label {
 .mp-menu ul li a .big {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1;
   font-size: 24px;
   letter-spacing: 2px;
 }
@@ -458,6 +461,7 @@ label {
 }
 #home .visit h2 {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #eac159;
@@ -540,6 +544,7 @@ label {
 }
 #home .different_features .block .large_text {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  line-height: 1;
   font-size: 48px;
   line-height: 48px;
   text-transform: uppercase;
@@ -611,6 +616,7 @@ label {
 #home .night_format .time {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1;
   font-size: 24px;
   line-height: 24px;
   color: #8e3f39;
@@ -684,6 +690,19 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: 700;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.site-footer .footer_links .group a:hover {
+  padding-left: 5px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  text-decoration: none;
+  color: #4b4b4b;
 }
 .site-footer .follow_us {
   text-align: center;
@@ -1275,6 +1294,7 @@ ul.list_groups li:last-child a {
 .default .main .description h3 {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1;
   font-size: 32px;
 }
 .default .main .description h4 {
@@ -1320,6 +1340,7 @@ ul.list_groups li:last-child a {
 }
 .sermons h2 {
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 48px;
@@ -1417,6 +1438,7 @@ ul.list_groups li:last-child a {
   text-shadow: none;
   font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1;
   letter-spacing: 2px;
   font-size: 16px;
   line-height: 28px;
