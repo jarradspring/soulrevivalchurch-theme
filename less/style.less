@@ -980,6 +980,7 @@ ul.list_groups {
         }
         &#pathways {
             text-align:center;
+            padding:30px 0;
         }
     }
     #pathwayOptions {
@@ -1019,8 +1020,10 @@ ul.list_groups {
 }
 #contact {
     .top_block {
+        text-align:center;
         .large_bree {
             color:#ffffff;
+            margin-top:0;
         }
         .small_text {
             color:@greenDark;
@@ -1028,10 +1031,59 @@ ul.list_groups {
     }
     .contact_our_team {
         background:@green;
-
+        padding:30px 15px;
+        form {
+            margin:30px 0;
+        }
+        label {
+            color:#ffffff;
+        }
+        .submit {
+            margin-top:20px;
+        }
+        .form-control {
+            border-color:@greenDark;
+            &:focus {
+                border-color:@greenDarker;
+            }
+        }
     }
     .meet_our_team {
         background:@greenMedium;
+        padding:30px 15px;
+        .description {
+            color:#ffffff;
+        }
+        .pastor {
+            margin-bottom:20px;
+            .name {
+                .univers;
+                color:#ffffff;
+                font-size:18px;
+                margin-bottom:5px;
+                line-height:1;
+
+            }
+            img {
+                width:100%;
+                height:auto;
+                margin-bottom:10px;
+                max-width:167px;
+            }
+            .title {
+                color:@greenDark;
+                .univers;
+                font-size:18px;
+                line-height:1;
+            }
+        }
+
+        .team {
+            margin-bottom:30px;
+        }
+        .btn {
+            padding:10px 90px;
+        }
     }
 }
 /* ==========================================================================
@@ -1042,10 +1094,6 @@ ul.list_groups {
     background:@bgGrey;
     text-align: center;
     margin-bottom:20px;
-    .inner {
-        margin:0 auto;
-        width:260px;
-    }
     .small_text {
         color:@textGrey;
         margin-bottom:0;
@@ -1060,10 +1108,144 @@ ul.list_groups {
         color:#ffffff;
     }
 }
-
+.contact_banner {
+    background:@bgGrey;
+    padding:30px 15px;
+    text-align:center;
+    .inner {
+        max-width:550px;
+        margin:0 auto;
+        .univers {
+            font-size:36px;
+            line-height:1;
+        }
+        .bree {
+            font-size:40px;
+            line-height:36px;
+        }
+        .small_text {
+            display:block;
+        }
+        .btn {
+            margin-top:5px;
+            padding:13px 0;
+        }
+    }
+    &.green {
+        .univers {
+            color:@green;
+        }
+        .btn {
+            .btnColour(@green);
+            &:hover, &:focus, &:active {
+                .btnColour(@greenMedium);
+            }
+        }
+    }
+    &.yellow {
+        .univers {
+            color:@yellow;
+        }
+        .btn {
+            .btnColour(@yellow);
+            &:hover, &:focus, &:active {
+                .btnColour(@yellowMedium);
+            }
+        }
+    }
+    &.blue {
+        .univers {
+            color:@blue;
+        }
+        .btn {
+            .btnColour(@blue);
+            &:hover, &:focus, &:active {
+                .btnColour(@blueMedium);
+            }
+        }
+    }
+    &.orange {
+        .univers {
+            color:@orange;
+        }
+        .btn {
+            .btnColour(@orange);
+            &:hover, &:focus, &:active {
+                .btnColour(@orangeMedium);
+            }
+        }
+    }
+    &.red {
+        .univers {
+            color:@red;
+        }
+        .btn {
+            .btnColour(@red);
+            &:hover, &:focus, &:active {
+                .btnColour(@redMedium);
+            }
+        }
+    }
+}
 .content {
 }
+.default {
+    text-align: center;
+    background:@bgGrey;
+    .main {
+        margin-bottom:50px;
+        .description {
+            h3 {
+                .univers;
+                font-size:32px;
+            }
+            h4 {
+                .bree;
+                font-size:20px;
+            }
+        }
+    }
+    .subsection {
+        padding:30px 15px;
+        .large_text {
+            color:#ffffff;
+            font-size:24px;
+            line-height:1;
+            margin:0;
+        }
+        .small_text {
+            color:#ffffff;
+        }
+        .description {
+            color:#ffffff;
+        }
+    }
+    &.red {
+        .page_header {
+            background:@red;
+        }
+        .main {
+            h2 {
+                color:@red;
+                font-size: 48px;
+                .univers;
+                line-height:1;
+            }
+        }
+        .subsection {
+            &.block1 {
+                background:@red;
+            }
+            &.block2 {
+                background:@redMedium;
+            }
+            &.block3 {
+                background:@redDark;
+            }
+        }
 
+    }
+}
 .sermons {
     background:@bgGrey;
     h2 {
@@ -1448,6 +1630,7 @@ figure.alignnone {
             margin-bottom:0;
             .inner {
                 width:425px;
+                margin:0 auto;
             }
             .btn-group {
                 .btn {
@@ -1463,6 +1646,11 @@ figure.alignnone {
             .inner {
                 margin:0 auto;
                 width:425px;
+            }
+        }
+        .give_options {
+            .btn {
+                padding:10px;
             }
         }
         .service_options {
@@ -1521,10 +1709,16 @@ figure.alignnone {
         }
         .contact_our_team {
             background:@green;
-
         }
         .meet_our_team {
             background:@greenMedium;
+            .small_text {
+                margin-bottom:30px;
+                display:inline-block;
+            }
+            .description {
+                margin-bottom:20px;
+            }
         }
     }
 }
@@ -1669,7 +1863,25 @@ figure.alignnone {
             }
         }
     }
-
+    #give {
+        .give_options {
+            .btn {
+                padding:10px 30px;
+            }
+        }
+    }
+    #contact {
+        .top_block {
+            .inner {
+                min-height:750px;
+            }
+        }
+    }
+    .default {
+        .container {
+            max-width:700px;
+        }
+    }
 }
 
 @media (min-width: 1200px) {

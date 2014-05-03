@@ -1031,6 +1031,7 @@ ul.list_groups li:last-child a {
 }
 #berea .section#pathways {
   text-align: center;
+  padding: 30px 0;
 }
 #berea #pathwayOptions .item {
   padding: 50px;
@@ -1067,17 +1068,71 @@ ul.list_groups li:last-child a {
 #berea #pathwayOptions .item.ministry {
   background: #129e83;
 }
+#contact .top_block {
+  text-align: center;
+}
 #contact .top_block .large_bree {
   color: #ffffff;
+  margin-top: 0;
 }
 #contact .top_block .small_text {
   color: #11ba99;
 }
 #contact .contact_our_team {
   background: #0fedc2;
+  padding: 30px 15px;
+}
+#contact .contact_our_team form {
+  margin: 30px 0;
+}
+#contact .contact_our_team label {
+  color: #ffffff;
+}
+#contact .contact_our_team .submit {
+  margin-top: 20px;
+}
+#contact .contact_our_team .form-control {
+  border-color: #11ba99;
+}
+#contact .contact_our_team .form-control:focus {
+  border-color: #129e83;
 }
 #contact .meet_our_team {
   background: #11d3ae;
+  padding: 30px 15px;
+}
+#contact .meet_our_team .description {
+  color: #ffffff;
+}
+#contact .meet_our_team .pastor {
+  margin-bottom: 20px;
+}
+#contact .meet_our_team .pastor .name {
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+#contact .meet_our_team .pastor img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  max-width: 167px;
+}
+#contact .meet_our_team .pastor .title {
+  color: #11ba99;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1;
+}
+#contact .meet_our_team .team {
+  margin-bottom: 30px;
+}
+#contact .meet_our_team .btn {
+  padding: 10px 90px;
 }
 /* ==========================================================================
    Content
@@ -1087,10 +1142,6 @@ ul.list_groups li:last-child a {
   background: #f2f2f2;
   text-align: center;
   margin-bottom: 20px;
-}
-.page_header .inner {
-  margin: 0 auto;
-  width: 260px;
 }
 .page_header .small_text {
   color: #6d6d6d;
@@ -1104,6 +1155,165 @@ ul.list_groups li:last-child a {
 }
 .page_header .page_description {
   color: #ffffff;
+}
+.contact_banner {
+  background: #f2f2f2;
+  padding: 30px 15px;
+  text-align: center;
+}
+.contact_banner .inner {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.contact_banner .inner .univers {
+  font-size: 36px;
+  line-height: 1;
+}
+.contact_banner .inner .bree {
+  font-size: 40px;
+  line-height: 36px;
+}
+.contact_banner .inner .small_text {
+  display: block;
+}
+.contact_banner .inner .btn {
+  margin-top: 5px;
+  padding: 13px 0;
+}
+.contact_banner.green .univers {
+  color: #0fedc2;
+}
+.contact_banner.green .btn {
+  background: #0fedc2;
+  webkit-box-shadow: 0px 3px 0px #00d4a9;
+  -moz-box-shadow: 0px 3px 0px #00d4a9;
+  box-shadow: 0px 3px 0px #00d4a9;
+}
+.contact_banner.green .btn:hover,
+.contact_banner.green .btn:focus,
+.contact_banner.green .btn:active {
+  background: #11d3ae;
+  webkit-box-shadow: 0px 3px 0px #00ba95;
+  -moz-box-shadow: 0px 3px 0px #00ba95;
+  box-shadow: 0px 3px 0px #00ba95;
+}
+.contact_banner.yellow .univers {
+  color: #eac159;
+}
+.contact_banner.yellow .btn {
+  background: #eac159;
+  webkit-box-shadow: 0px 3px 0px #d1a840;
+  -moz-box-shadow: 0px 3px 0px #d1a840;
+  box-shadow: 0px 3px 0px #d1a840;
+}
+.contact_banner.yellow .btn:hover,
+.contact_banner.yellow .btn:focus,
+.contact_banner.yellow .btn:active {
+  background: #cca650;
+  webkit-box-shadow: 0px 3px 0px #b38d37;
+  -moz-box-shadow: 0px 3px 0px #b38d37;
+  box-shadow: 0px 3px 0px #b38d37;
+}
+.contact_banner.blue .univers {
+  color: #6296f4;
+}
+.contact_banner.blue .btn {
+  background: #6296f4;
+  webkit-box-shadow: 0px 3px 0px #497ddb;
+  -moz-box-shadow: 0px 3px 0px #497ddb;
+  box-shadow: 0px 3px 0px #497ddb;
+}
+.contact_banner.blue .btn:hover,
+.contact_banner.blue .btn:focus,
+.contact_banner.blue .btn:active {
+  background: #5686ce;
+  webkit-box-shadow: 0px 3px 0px #3d6db5;
+  -moz-box-shadow: 0px 3px 0px #3d6db5;
+  box-shadow: 0px 3px 0px #3d6db5;
+}
+.contact_banner.orange .univers {
+  color: #f29764;
+}
+.contact_banner.orange .btn {
+  background: #f29764;
+  webkit-box-shadow: 0px 3px 0px #d97e4b;
+  -moz-box-shadow: 0px 3px 0px #d97e4b;
+  box-shadow: 0px 3px 0px #d97e4b;
+}
+.contact_banner.orange .btn:hover,
+.contact_banner.orange .btn:focus,
+.contact_banner.orange .btn:active {
+  background: #dd885e;
+  webkit-box-shadow: 0px 3px 0px #c46f45;
+  -moz-box-shadow: 0px 3px 0px #c46f45;
+  box-shadow: 0px 3px 0px #c46f45;
+}
+.contact_banner.red .univers {
+  color: #e8695b;
+}
+.contact_banner.red .btn {
+  background: #e8695b;
+  webkit-box-shadow: 0px 3px 0px #cf5042;
+  -moz-box-shadow: 0px 3px 0px #cf5042;
+  box-shadow: 0px 3px 0px #cf5042;
+}
+.contact_banner.red .btn:hover,
+.contact_banner.red .btn:focus,
+.contact_banner.red .btn:active {
+  background: #c6574b;
+  webkit-box-shadow: 0px 3px 0px #ad3e32;
+  -moz-box-shadow: 0px 3px 0px #ad3e32;
+  box-shadow: 0px 3px 0px #ad3e32;
+}
+.default {
+  text-align: center;
+  background: #f2f2f2;
+}
+.default .main {
+  margin-bottom: 50px;
+}
+.default .main .description h3 {
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.default .main .description h4 {
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+}
+.default .subsection {
+  padding: 30px 15px;
+}
+.default .subsection .large_text {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
+}
+.default .subsection .small_text {
+  color: #ffffff;
+}
+.default .subsection .description {
+  color: #ffffff;
+}
+.default.red .page_header {
+  background: #e8695b;
+}
+.default.red .main h2 {
+  color: #e8695b;
+  font-size: 48px;
+  font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.default.red .subsection.block1 {
+  background: #e8695b;
+}
+.default.red .subsection.block2 {
+  background: #c6574b;
+}
+.default.red .subsection.block3 {
+  background: #8e3f39;
 }
 .sermons {
   background: #f2f2f2;
@@ -1428,6 +1638,7 @@ figure.alignnone {
   }
   #give .page_header .inner {
     width: 425px;
+    margin: 0 auto;
   }
   #give .page_header .btn-group .btn {
     display: block;
@@ -1441,6 +1652,9 @@ figure.alignnone {
   #give .section .inner {
     margin: 0 auto;
     width: 425px;
+  }
+  #give .give_options .btn {
+    padding: 10px;
   }
   #give .service_options ul.list_groups {
     width: 300px;
@@ -1485,6 +1699,13 @@ figure.alignnone {
   }
   #contact .meet_our_team {
     background: #11d3ae;
+  }
+  #contact .meet_our_team .small_text {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+  #contact .meet_our_team .description {
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -1606,6 +1827,15 @@ figure.alignnone {
     position: relative;
     left: 50%;
     margin-left: -320px;
+  }
+  #give .give_options .btn {
+    padding: 10px 30px;
+  }
+  #contact .top_block .inner {
+    min-height: 750px;
+  }
+  .default .container {
+    max-width: 700px;
   }
 }
 @media (min-width: 1200px) {

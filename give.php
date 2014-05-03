@@ -97,7 +97,7 @@ get_header(); ?>
                     <p class="small_text">
                         You can give here using your credit card
                     </p>
-                    <a class="btn orangeDark btn-block" href="#">Givenow.com.au</a>
+                    <a class="btn orangeDark" href="#">Givenow.com.au</a>
                 </div>
                 <div class="col-sm-4">
                     <h4 class="large_text">Cheques</h4>
