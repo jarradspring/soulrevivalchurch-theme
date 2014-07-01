@@ -37,7 +37,7 @@ get_header(); ?>
                         <div class="visit block">
                             <h2>Saturdays <span>5:00PM</span></h2>
                             <span class="small_text">40a Flora Street, Kirrawee</span>
-                            <a class="btn yellow" href="#">I want to visit</a>
+                            <a class="btn yellow" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-12">
@@ -81,7 +81,7 @@ get_header(); ?>
                     <p class="option">Thirdly</p>
                     <p class="small_text">We share dinner</p>
                     <p class="large_text">Every Week</p>
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/factory-icon.png" alt="Our Factory">
+                    <i class="fa fa-cutlery"></i>
                 </div>
             </div>
         </div>
