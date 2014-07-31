@@ -1983,16 +1983,17 @@ figure.alignnone {
 @media (min-width: 992px) {
     .carousel-inner > .item > img, .carousel-inner > .item > a > img {
         display: block;
-        height: 100%;
         max-width: 1600px;
+        height:auto;
+        width:100%;
         line-height: 1;
         position: relative;
         left: 50%;
         top: 0;
-        margin-left: -800px;
+        margin-left: -50%;
     }
     #home {
-        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
             height:680px;
             margin-left:-650px;
         }
@@ -2145,8 +2146,7 @@ figure.alignnone {
 @media (min-width: 1200px) {
     #home {
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-            height:800px;
-            margin-left:-800px;
+            margin-left:-50%;
         }
         .block {
             height:400px;
