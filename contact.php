@@ -87,7 +87,7 @@ get_header(); ?>
         </div>
     </div>
     <div class="contact_banner green">
-        <?php inlcude_once('contact_banner'); ?>
+        <?php inlcude('contact_banner'); ?>
     </div>
     
 </div>

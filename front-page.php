@@ -9,22 +9,28 @@ get_header(); ?>
         <div class="row">
             <div class="col-sm-12 col-md-8">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php if( get_field('slide') ): ?>
-                            <?php while( has_sub_field('slide') ): ?>
+                    <?php if( get_field('slide_group') ): ?>
+                        <div class="carousel-inner">
+                            <?php $isFirstElementActive = false; ?>
+                            <?php while( has_sub_field('slide_group') ): ?>
                                 <!-- Wrapper for slides -->
+<<<<<<< HEAD:home.php
                                 <div class="item active">
                                     <img src="<?php the_sub_field('image'); ?>" alt="" />
                                     <?php if (get_field('has_small_text_b1') != false):?>
                                     <span class="small_text"><?php the_field('small_text_b1'); ?></span>
                                     <?php endif; ?>
+=======
+                                <div class="item <?php if (!$isFirstElementActive) { $isFirstElementActive = true; echo " active "; } ?>">
+                                    <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
+>>>>>>> FETCH_HEAD:front-page.php
                                     <div class="carousel-caption">
-                                        <?php the_sub_field('caption'); ?>
+                                        <?php the_sub_field('slide_caption'); ?>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
+                            <?php endwhile;  $isFirstElementActive = false;?>
+                        </div>
+                    <?php endif; ?>
                     <!-- Controls -->
                     <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
                         <i class="fa fa-angle-left"></i>
@@ -34,13 +40,14 @@ get_header(); ?>
                     </a>
                 </div>
             </div>
+
             <div class="col-sm-12 col-md-4">
                 <div class="row">
                     <div class="col-sm-6 col-md-12">
                         <div class="visit block">
                             <h2>Saturdays <span>5:00PM</span></h2>
                             <span class="small_text">40a Flora Street, Kirrawee</span>
-                            <a class="btn yellow" href="#">I want to visit</a>
+                            <a class="btn yellow" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-12">
@@ -84,7 +91,7 @@ get_header(); ?>
                     <p class="option">Thirdly</p>
                     <p class="small_text">We share dinner</p>
                     <p class="large_text">Every Week</p>
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/factory-icon.png" alt="Our Factory">
+                    <i class="fa fa-cutlery"></i>
                 </div>
             </div>
         </div>

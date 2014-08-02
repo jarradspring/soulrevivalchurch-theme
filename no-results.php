@@ -8,11 +8,8 @@
  */
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'blain' ); ?></h1>
-	</header><!-- .page-header -->
 
+		<h2 class="univers"><?php _e( 'Nothing Found', 'blain' ); ?></h2>
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
