@@ -15,6 +15,9 @@ get_header(); ?>
                                 <!-- Wrapper for slides -->
                                 <div class="item active">
                                     <img src="<?php the_sub_field('image'); ?>" alt="" />
+                                    <?php if (get_field('has_small_text_b1') != false):?>
+                                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
+                                    <?php endif; ?>
                                     <div class="carousel-caption">
                                         <?php the_sub_field('caption'); ?>
                                     </div>
