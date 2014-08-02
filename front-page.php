@@ -14,16 +14,8 @@ get_header(); ?>
                             <?php $isFirstElementActive = false; ?>
                             <?php while( has_sub_field('slide_group') ): ?>
                                 <!-- Wrapper for slides -->
-<<<<<<< HEAD:home.php
-                                <div class="item active">
-                                    <img src="<?php the_sub_field('image'); ?>" alt="" />
-                                    <?php if (get_field('has_small_text_b1') != false):?>
-                                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
-                                    <?php endif; ?>
-=======
                                 <div class="item <?php if (!$isFirstElementActive) { $isFirstElementActive = true; echo " active "; } ?>">
                                     <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
->>>>>>> FETCH_HEAD:front-page.php
                                     <div class="carousel-caption">
                                         <?php the_sub_field('slide_caption'); ?>
                                     </div>
@@ -48,6 +40,7 @@ get_header(); ?>
                             <h2>Saturdays <span>5:00PM</span></h2>
                             <span class="small_text">40a Flora Street, Kirrawee</span>
                             <a class="btn yellow" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
+                            <?php require_once('visit-modal.php'); ?>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-12">
@@ -124,7 +117,7 @@ get_header(); ?>
                     <div class="large_text">Party</div>
                 </div>
             </div>
-            <a class="btn red" href="/im-new">Find Out More</a>
+            <a class="btn red" href="<?php bloginfo('url'); ?>/im-new">Find Out More</a>
         </div>
     </div>
     <div class="section instagram_feed">
@@ -199,7 +192,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a class="btn blue" href="/whats-on">See More</a>
+            <a class="btn blue" href="<?php bloginfo('url'); ?>/whats-on">See More</a>
         </div>
     </div>
 

@@ -83,7 +83,6 @@ html, body, .wrapper, .scroller {
 }
 .scroller-inner {
     min-height:100%;
-    margin-bottom:-135px;
     height:auto !important;
 }
 body {
@@ -362,8 +361,6 @@ label {
         }
     }
 }
-.scroller-inner {
-}
 
 //SLIDER ---------------------------------------
 .carousel-control {
@@ -594,6 +591,7 @@ label {
 /* ==========================================================================
    Footer
    ========================================================================== */
+
 .site-footer {
     background:#cccccc;
     padding:30px 0;
@@ -1567,6 +1565,25 @@ ul.list_groups {
 }
 
 /* ==========================================================================
+   Modal
+   ========================================================================== */
+.modal {
+    .close {
+        position: absolute;
+        top:10px;
+        right:15px;
+        font-size:50px;
+    }
+    .modal-content {
+        .border-radius(0);
+        .modal-body {
+            padding:50px;
+        }
+    }
+}
+
+
+/* ==========================================================================
    Primary Content
    ========================================================================== */
 
@@ -1641,6 +1658,9 @@ figure.alignnone {
 @import 'style-md';
 @import 'style-lg';*/
 @media (min-width: 768px) {
+    .scroller-inner {
+        margin-bottom:-137px;
+    }
     .push {
         height:137px;
     }
