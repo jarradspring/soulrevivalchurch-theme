@@ -77,6 +77,7 @@ body,
 }
 .scroller-inner {
   min-height: 100%;
+  margin-bottom: -135px;
   height: auto !important;
 }
 body {
@@ -1582,23 +1583,6 @@ ul.list_groups li:last-child a {
   width: 100%;
 }
 /* ==========================================================================
-   Modal
-   ========================================================================== */
-.modal .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 50px;
-}
-.modal .modal-content {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.modal .modal-content .modal-body {
-  padding: 50px;
-}
-/* ==========================================================================
    Primary Content
    ========================================================================== */
 /* Gallery Shortcode */
@@ -1639,9 +1623,6 @@ figure.alignnone {
 @import 'style-md';
 @import 'style-lg';*/
 @media (min-width: 768px) {
-  .scroller-inner {
-    margin-bottom: -137px;
-  }
   .push {
     height: 137px;
   }

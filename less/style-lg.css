@@ -1,0 +1,23 @@
+@media (min-width: 1200px) {
+  #home .carousel-inner > .item > img,
+  #home .carousel-inner > .item > a > img {
+    height: 800px;
+    margin-left: -800px;
+  }
+  #home .block {
+    height: 400px;
+    padding: 120px 0;
+  }
+  #home .block.visit {
+    padding: 145px 0;
+  }
+  #home .block.jesus_changes {
+    padding: 120px 0;
+  }
+  #home .different_features .block {
+    padding: 70px;
+  }
+  #home .instagram_feed .empty {
+    height: 143px;
+  }
+}
