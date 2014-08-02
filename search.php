@@ -7,13 +7,14 @@
 
 get_header(); ?>
 
-<div class="page_content default red search">
-    <div class="main">
-        <div class="container">
+	<section id="primary" class="content-area col-md-9">
+		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-            <h2 class="univers"><?php printf( __( 'Search Results for: %s', 'blain' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'blain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -29,7 +30,9 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'search' ); ?>
 
 		<?php endif; ?>
-        </div>
-    </div>
-</div>
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

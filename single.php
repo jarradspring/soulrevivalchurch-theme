@@ -6,20 +6,26 @@
  */
 
 get_header(); ?>
-<div class="page_content default red error">
-    <div class="main">
-        <div class="container">
-            <div class="description">
-                <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'content', 'single' ); ?>
+	<div id="primary" class="content-area col-md-9">
+		<main id="main" class="site-main" role="main">
 
-                <?php endwhile; // end of the loop. ?>
-            </div>
-            <a href="/blog" class="btn red">Back to Blog</a>
-	    </div><!-- #primary -->
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php get_template_part( 'content', 'single' ); ?>
+
+			<?php blain_content_nav( 'nav-below' ); ?>
+
+			<?php
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() )
+					comments_template();
+			?>
+
+		<?php endwhile; // end of the loop. ?>
+
+		</main><!-- #main -->
 	</div><!-- #primary -->
-</div><!-- #primary -->
 
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

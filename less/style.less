@@ -89,9 +89,6 @@ body {
     background:@bgGrey;
 }
 
-.navbar-header {
-    background:#ffffff;
-}
 //Colours
 @bgGrey: #f2f2f2;
 @textGrey: #6D6D6D;
@@ -329,7 +326,6 @@ label {
 .mp-menu {
     background:#6d6d6d;
     ul {
-        margin-top:20px;
         li {
             a {
                 padding:7px 20px;
@@ -742,7 +738,7 @@ label {
 #whatson {
     .block {
         text-align:center;
-        padding:40px 10px;
+        padding:70px 10px;
         .large_bree {
             color:#ffffff;
         }
@@ -759,7 +755,7 @@ label {
         text-align:center;
         .links {
             background:@bgGrey;
-            padding:20px 20px;
+            padding:30px 20px;
             .small_text {
                 display:block;
                 color:@blue;
@@ -790,7 +786,7 @@ label {
         .small_text {
             margin-top:-5px;
             color:@blueDark;
-            margin-bottom:10px;
+            margin-bottom:30px;
             display:inline-block;
         }
         ul {
@@ -860,15 +856,6 @@ ul.list_groups {
     .story {
         text-align:center;
         margin-bottom:15px;
-        a {
-            &:hover {
-                display:block;
-                text-decoration:none;
-                .info {
-                    background:@yellowMedium;
-                }
-            }
-        }
         .info {
             background:@yellow;
             text-align:center;
@@ -876,12 +863,19 @@ ul.list_groups {
             height:180px;
             display:block;
             color:#ffffff;
+            &:hover {
+                background:@yellowMedium;
+                text-decoration:none;
+            }
             .inner {
                 display:block;
                 color:#ffffff;
                 &:hover {
                     text-decoration:none;
+                    span {
+                    }
                 }
+
                 .small_text {
                     color:@textGrey;
                     margin-bottom:0;
@@ -1216,23 +1210,8 @@ ul.list_groups {
 .default {
     text-align: center;
     background:@bgGrey;
-    &.error {
-        padding:60px 0;
-    }
-    &.search {
-        padding:60px 0;
-        .hentry {
-            .univers {
-                font-size:32px;
-                color:@textGrey;
-                a {
-                    color:@textGrey;
-                }
-            }
-        }
-    }
     .main {
-        padding-bottom:50px;
+        margin-bottom:50px;
         .top {
             padding:50px 0 20px;
             .large_text {
@@ -1240,13 +1219,6 @@ ul.list_groups {
             }
         }
         .description {
-            p {
-                line-height:27px;
-            }
-            img {
-                max-width:100%;
-                height:auto;
-            }
             h3 {
                 .univers;
                 font-size:32px;
@@ -1254,19 +1226,6 @@ ul.list_groups {
             h4 {
                 .bree;
                 font-size:20px;
-            }
-            &.blog_article {
-                padding-bottom:50px;
-                border-bottom:2px dashed #cccccc;
-                margin-bottom:50px;
-                h2 {
-                    font-size:48px;
-                    margin-bottom:10px;
-                }
-                &:last-child {
-                    padding-bottom:0;
-                    border-bottom:0;
-                }
             }
         }
     }
@@ -1311,10 +1270,6 @@ ul.list_groups {
             a {
                 color:@red;
             }
-            .btn {
-                color:#ffffff;
-            }
-
         }
         .subsection {
             &.block1 {
@@ -1342,9 +1297,6 @@ ul.list_groups {
             }
             a {
                 color:@green;
-            }
-            .btn {
-                color:#ffffff;
             }
         }
         .subsection {
@@ -1374,9 +1326,6 @@ ul.list_groups {
             a {
                 color:@blue;
             }
-            .btn {
-                color:#ffffff;
-            }
         }
         .subsection {
             &.block1 {
@@ -1405,9 +1354,6 @@ ul.list_groups {
             a {
                 color:@yellow;
             }
-            .btn {
-                color:#ffffff;
-            }
         }
         .subsection {
             &.block1 {
@@ -1435,9 +1381,6 @@ ul.list_groups {
             }
             a {
                 color:@orange;
-            }
-            .btn {
-                color:#ffffff;
             }
         }
         .subsection {
@@ -1563,7 +1506,6 @@ ul.list_groups {
         width:100%;
     }
 }
-
 /* ==========================================================================
    Modal
    ========================================================================== */
@@ -1726,18 +1668,13 @@ figure.alignnone {
         }
     }
     .site-footer {
-        position:relative;
         .footer_links {
             .group {
                 float:left;
-                margin-right:13px;
+                margin-right:50px;
                 text-align:left;
-                min-width:155px;
-                &.small {
-                    min-width:100px;
-                }
-                &.medium {
-                    min-width:135px;
+                a {
+
                 }
             }
         }
@@ -1786,7 +1723,6 @@ figure.alignnone {
     }
     #whatson {
         .block {
-            padding:70px 10px;
             .inner {
                 width:270px;
                 margin:0 auto;
@@ -1848,51 +1784,15 @@ figure.alignnone {
         .story {
             overflow:hidden;
             margin-bottom:30px;
-            a {
-                display:block;
-                .transition (all ease .7s);
-                &:hover {
-                    .transition (all ease .7s);
-                    .info {
-                        padding-right:200px;
-                        .transition (all ease .7s);
-                    }
-                    .image {
-                        width:200px;
-                        .transition (all ease .7s);
-                        img {
-                            -ms-transform:scale(1.2); /* IE 9 */
-                            -moz-transform:scale(1.2); /* Firefox */
-                            -webkit-transform:scale(1.2); /* Safari and Chrome */
-                            -o-transform:scale(1.2);
-                            transform:scale(1.2);
-                            .transition (all ease .7s);
-                        }
-                    }
-                }
-            }
             .info {
-                padding-left:0;
+                padding-left:15px;
                 padding-right:180px;
-                .transition (all ease .7s);
             }
             .image {
                 width:180px;
-                height:180px;
                 overflow:hidden;
                 display:block;
                 margin-right:15px;
-                .transition (all ease .7s);
-                img {
-                    -ms-transform:scale(1); /* IE 9 */
-                    -moz-transform:scale(1); /* Firefox */
-                    -webkit-transform:scale(1); /* Safari and Chrome */
-                    -o-transform:scale(1);
-                    transform:scale(1);
-                    .transition (all ease .7s);
-                }
-
-
                 img {
                     position:relative;
                     left:50%;
@@ -2003,17 +1903,16 @@ figure.alignnone {
 @media (min-width: 992px) {
     .carousel-inner > .item > img, .carousel-inner > .item > a > img {
         display: block;
+        height: 100%;
         max-width: 1600px;
-        height:auto;
-        width:100%;
         line-height: 1;
         position: relative;
         left: 50%;
         top: 0;
-        margin-left: -50%;
+        margin-left: -800px;
     }
     #home {
-        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
             height:680px;
             margin-left:-650px;
         }
@@ -2086,14 +1985,11 @@ figure.alignnone {
         }
     }
     #whatson {
-        .groups {
-            height:870px;
-        }
         .sermons {
-            height:435px;
+            height:484px;
         }
         .whats_on {
-            height:435px;
+            height:484px;
         }
         .recent {
             position:relative;
@@ -2127,6 +2023,7 @@ figure.alignnone {
     #stories {
         .story {
             .info {
+                padding-left:15px;
                 padding-right:320px;
             }
             .image {
@@ -2166,7 +2063,8 @@ figure.alignnone {
 @media (min-width: 1200px) {
     #home {
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-            margin-left:-50%;
+            height:800px;
+            margin-left:-800px;
         }
         .block {
             height:400px;
@@ -2197,17 +2095,6 @@ figure.alignnone {
                 .links {
                 }
             }
-        }
-    }
-    #whatson {
-        .groups {
-            height:720px;
-        }
-        .sermons {
-            height:480px;
-        }
-        .whats_on {
-            height:480px;
         }
     }
 }

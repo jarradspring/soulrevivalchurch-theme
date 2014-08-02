@@ -136,10 +136,8 @@ get_header(); ?>
                         <?php if( get_field('link_l1') ): ?>
                             <?php while( has_sub_field('link_l1') ): ?>
                                 <li>
-                                    <?php if (get_sub_field('link_type_l1') != 'false'):?>
+                                    <?php if (get_sub_field('link_type_l1') == 'internal_link'):?>
                                         <a href="<?php the_sub_field('internal_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
-                                    <?php elseif (get_sub_field('link_type_l1') == 'false'):?>
-                                        <a href="<?php the_sub_field('external_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
                                     <?php endif; ?>
                                 </li>
                             <?php endwhile; ?>
@@ -151,19 +149,24 @@ get_header(); ?>
                 <div class="col-sm-6 col-md-4">
                     <h4 class="large_text">Training Opportunities</h4>
                     <ul class="list-unstyled list_groups">
-                        <?php if( get_field('link_l2') ): ?>
-                            <?php while( has_sub_field('link_l2') ): ?>
-                                <li>
-                                    <?php if (get_sub_field('link_type_l2') != 'false'):?>
-                                        <a href="<?php the_sub_field('internal_link_l2'); ?>"><span class="small_text"><?php the_sub_field('link_text_l2'); ?></span></a>
-                                        <?php elseif (get_sub_field('link_type_l2') == 'false'):?>
-                                        <a href="<?php the_sub_field('external_link_l2'); ?>"><span class="small_text"><?php the_sub_field('link_text_l2'); ?></span></a>
-                                    <?php endif; ?>
-                                </li>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <li>
+                            <a href="#"><span class="small_text"><strong>Berean Youth Stream</strong>(for High Schoolers)</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+
                     </ul>
-                    <a class="btn orange" href="/berea">Find Out More</a>
+                    <a class="btn orange" href="#">Find Out More</a>
                 </div>
             </div>
         </div>

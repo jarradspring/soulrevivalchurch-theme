@@ -8,19 +8,9 @@ get_header(); ?>
     <div class="page_header">
         <div class="container">
             <div class="inner">
-                <?php if (get_field('has_small_text_b1') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
-                <?php endif; ?>
-                <h2 class="large_text"><?php the_field('large_text_b1'); ?></h2>
-
-                <div class="page_description"><?php the_field('description_b1'); ?></div>
-                <?php if (get_field('has_button_b1') != false):?>
-                    <?php if( get_field('button_b1') ): ?>
-                        <?php while( has_sub_field('button_b1') ): ?>
-                            <a class="btn yellowDark" href="<?php the_sub_field('button_link_b1'); ?>"><?php the_sub_field('button_text_b1'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <span class="small_text">Jesus Changes</span>
+                <h2 class="large_text">Lives</h2>
+                <p class="page_description">Hear of the stories of those who come to our church and the way Jesus has given them something new.</p>
             </div>
         </div>
     </div>
@@ -28,18 +18,18 @@ get_header(); ?>
         <div class="row">
             <div class="col-sm-6">
                 <div class="story">
-                    <a href="<?php the_sub_field('video_link'); ?>">
-                        <span class="info">
-                            <span class="inner">
-                                <span class="small_text">Watch</span>
-                                <span class="large_text name">Brad<?php the_sub_field('name'); ?>'s</span>
-                                <span class="small_text">Story</span>
-                            </span>
-                        </span>
-                        <span class="image">
-                            <img src="http://placehold.it/320x180" alt="<?php the_sub_field('name'); ?>" />
+                    <a href="<?php the_sub_field('video_link'); ?>" class="info">
+                        <span class="inner">
+                            <span class="small_text">Watch</span>
+                            <span class="large_text name">Brad<?php the_sub_field('name'); ?>'s</span>
+                            <span class="small_text">Story</span>
                         </span>
                     </a>
+                    <div class="image">
+                        <a href="<?php the_sub_field('video_link'); ?>">
+                            <img src="http://placehold.it/320x180" alt="<?php the_sub_field('name'); ?>" />
+                        </a>
+                    </div>
                 </div>
             </div>
             <?php if( get_field('story') ): ?>
