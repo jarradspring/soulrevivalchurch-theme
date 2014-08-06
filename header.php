@@ -20,7 +20,8 @@
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href="<?php bloginfo('template_directory'); ?>/less/component.css" rel="stylesheet">
     <link href="<?php bloginfo('template_directory'); ?>/less/style.less" rel="stylesheet">
-    <link href="<?php bloginfo('template_directory'); ?>/less/style.css" rel="stylesheet">
+    <!--<link href="<?php /*bloginfo('template_directory'); */?>/less/style.css" rel="stylesheet">-->
+
     <script src="<?php bloginfo('template_directory'); ?>/js/audiojs/audio.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/pushmenu/classie.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/pushmenu/mlpushmenu.js"></script>

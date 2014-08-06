@@ -30,6 +30,31 @@ get_header(); ?>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+        <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+            <?php if( get_field('slide_group') ): ?>
+                <div class="carousel-inner">
+
+                    <?php $isFirstElementActive = false; ?>
+                    <?php while( has_sub_field('slide_group') ): ?>
+                        <!-- Wrapper for slides -->
+                        <div class="item <?php if (!$isFirstElementActive) { $isFirstElementActive = true; echo " active "; } ?>">
+                            <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
+                            <div class="carousel-caption">
+                                <?php the_sub_field('slide_caption'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile;  $isFirstElementActive = false;?>
+
+                </div>
+            <?php endif; ?>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right carousel-control" href="#homeCarousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
     </div>
 </div>
 
