@@ -81,11 +81,7 @@ html, body, .wrapper, .scroller {
 .scroller {
     overflow-y:scroll;
 }
-.scroller-inner {
-    min-height:100%;
-    margin-bottom:-135px;
-    height:auto !important;
-}
+
 body {
     background:@bgGrey;
 }
@@ -397,6 +393,16 @@ label {
                 .bree;
                 color:@textGrey;
                 text-transform: uppercase;
+            }
+        }
+        .large_text {
+            color:@yellow;
+        }
+        .btn {
+            color:#ffffff;
+            .btnColour(@yellow);
+            &:hover, &:focus, &:active {
+                .btnColour(@yellowMedium);
             }
         }
         .small_text {
@@ -1158,7 +1164,7 @@ ul.list_groups {
         }
     }
     &.green {
-        .univers {
+        .univers, .large_text {
             color:@green;
         }
         .btn {
@@ -1169,7 +1175,7 @@ ul.list_groups {
         }
     }
     &.yellow {
-        .univers {
+        .univers, .large_text {
             color:@yellow;
         }
         .btn {
@@ -1180,7 +1186,7 @@ ul.list_groups {
         }
     }
     &.blue {
-        .univers {
+        .univers, .large_text {
             color:@blue;
         }
         .btn {
@@ -1191,7 +1197,7 @@ ul.list_groups {
         }
     }
     &.orange {
-        .univers {
+        .univers, .large_text {
             color:@orange;
         }
         .btn {
@@ -1202,7 +1208,7 @@ ul.list_groups {
         }
     }
     &.red {
-        .univers {
+        .univers, .large_text {
             color:@red;
         }
         .btn {
@@ -1567,10 +1573,22 @@ ul.list_groups {
 }
 
 /* ==========================================================================
-   Primary Content
+   Modal
    ========================================================================== */
 
-.main {
+.modal {
+    .modal-content {
+        .border-radius(0);
+        .modal-body {
+            padding:20px;
+        }
+    }
+    .close {
+        font-size:50px;
+        position:absolute;
+        top:10px;
+        right:15px;
+    }
 }
 
 /* Gallery Shortcode */
@@ -1641,8 +1659,13 @@ figure.alignnone {
 @import 'style-md';
 @import 'style-lg';*/
 @media (min-width: 768px) {
+    .scroller-inner {
+        min-height:100%;
+        margin-bottom:-135px;
+        height:auto !important;
+    }
     .push {
-        height:137px;
+        height:135px;
     }
     .large_bree {
         .bree;
@@ -1977,6 +2000,14 @@ figure.alignnone {
             }
         }
     }
+    .modal {
+        .modal-content {
+            .border-radius(0);
+            .modal-body {
+                padding:50px;
+            }
+        }
+    }
 }
 
 
@@ -1993,10 +2024,10 @@ figure.alignnone {
         margin-left: -50%;
     }
     #home {
-        .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        .carousel-inner > .item  {
             height:680px;
-            margin-left:-650px;
         }
+
         .block {
             height:340px;
             padding:120px 0;
@@ -2145,6 +2176,9 @@ figure.alignnone {
 
 @media (min-width: 1200px) {
     #home {
+        .carousel-inner > .item  {
+            height:800px;
+        }
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
             margin-left:-50%;
         }

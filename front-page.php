@@ -40,6 +40,7 @@ get_header(); ?>
                             <h2>Saturdays <span>5:00PM</span></h2>
                             <span class="small_text">40a Flora Street, Kirrawee</span>
                             <a class="btn yellow" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
+                            <?php include_once('visit-modal.php'); ?>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-12">
@@ -116,7 +117,7 @@ get_header(); ?>
                     <div class="large_text">Party</div>
                 </div>
             </div>
-            <a class="btn red" href="/im-new">Find Out More</a>
+            <a class="btn red" href="<?php bloginfo('url'); ?>/new">Find Out More</a>
         </div>
     </div>
     <div class="section instagram_feed">
@@ -191,7 +192,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a class="btn blue" href="/whats-on">See More</a>
+            <a class="btn blue" href="<?php bloginfo('url'); ?>/whats-on">See More</a>
         </div>
     </div>
 

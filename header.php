@@ -39,11 +39,11 @@
         <nav id="mp-menu" class="mp-menu">
             <div class="mp-level">
                 <ul>
-                    <li><a href="/jesus"><span class="big">Jesus</span><span class="small_text">Changes Everything</span></a></li>
-                    <li><a href="/new"><span class="big">I'm New</span><span class="small_text">Come | Stay | Grow</span></a></li>
-                    <li><a href="/connect"><span class="big">Connect</span><span class="small_text">Groups | Sermons | What's On</span></a></li>
-                    <li><a href="/give"><span class="big">Give</span><span class="small_text">Pray | Donate | Serve</span></a></li>
-                    <li><a href="/contact"><span class="big">Contact</span><span class="small_text">Our Team</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/jesus"><span class="big">Jesus</span><span class="small_text">Changes Everything</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/new"><span class="big">I'm New</span><span class="small_text">Come | Stay | Grow</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/connect"><span class="big">Connect</span><span class="small_text">Groups | Sermons | What's On</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/give"><span class="big">Give</span><span class="small_text">Pray | Donate | Serve</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/contact"><span class="big">Contact</span><span class="small_text">Our Team</span></a></li>
                 </ul>
             </div>
         </nav>
