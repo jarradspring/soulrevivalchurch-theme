@@ -1,0 +1,58 @@
+/*
+Theme Name: SoulRevivalChurch-theme
+Author: Jarrad Spring
+Version: 1
+License: GNU General Public License
+License URI: license.txt
+
+*/
+
+@font-face {
+    font-family: 'Univers';
+    src: url('/wp-content/themes/soulrevivalchurch-theme/fonts/universltstd-ultracn-webfont.eot');
+    src: url('/wp-content/themes/soulrevivalchurch-theme/fonts/universltstd-ultracn-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/soulrevivalchurch-theme/fonts/universltstd-ultracn-webfont.woff') format('woff'),
+    url('/wp-content/themes/soulrevivalchurch-theme/fonts/universltstd-ultracn-webfont.ttf') format('truetype'),
+    url('/wp-content/themes/soulrevivalchurch-theme/fonts/universltstd-ultracn-webfont.svg#UniversLTStd59UltraCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body, input, select, button {
+    font-family: 'Alegreya Sans', Helvetica, Arial, sans-serif;
+    color:#6D6D6D;
+    font-size:16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    .alegreya;
+    font-weight:400;
+    margin:10px 0;
+}
+
+h1 {
+    font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+    letter-spacing:2px;
+    font-size:48px;
+    text-transform:uppercase;
+}
+h2 {
+    font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+    letter-spacing:1px;
+    font-size:36px;
+    text-transform:uppercase;
+    margin-top:0;
+}
+h3 {
+    font-family: 'Univers', 'Alegreya Sans', Helvetica, Arial, sans-serif;
+    letter-spacing:1px;
+    font-size:24px;
+    text-transform:uppercase;
+}
+h4 {
+    font-family: 'Bree Serif', serif;
+    color:#6D6D6D;
+    font-size:20px;
+}
+p {
+    margin:0 0 10px;
+}

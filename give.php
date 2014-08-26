@@ -8,19 +8,11 @@ get_header(); ?>
     <div class="page_header">
         <div class="container">
             <div class="inner">
-                <h2 class="large_text"><?php the_field('large_text_b1'); ?></h2>
-                <?php if (get_field('has_small_text_b1') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
-                <?php endif; ?>
-                <div class="page_description"><?php the_field('description_b1'); ?></div>
-                <?php if (get_field('has_button_b1') != false):?>
-                    <?php if( get_field('button_b1') ): ?>
-                        <?php while( has_sub_field('button_b1') ): ?>
-                            <a class="btn orange" href="<?php the_sub_field('button_link_b1'); ?>"><?php the_sub_field('button_text_b1'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
-
+                <h2 class="large_text">Become a Friend</h2>
+                <span class="small_text">of Soul Revival Church</span>
+                <div class="page_description">
+                    <p>God is doing great work at Soul Revival. We want you to be part of it by becoming a Friend of Soul Revival. Friends of Soul Revival is a network of people. They partner with us in two important ways – by praying for Soul Revival, by giving to Soul Revival, or both. They can also sign up to receive regular news, stories, videos and prayer updates from Soul Revival.</p>
+                </div>
                 <div class="btn-group">
                     <a class="btn orange" href="#pray">Pray</a>
                     <a class="btn orangeMedium" href="#donate">Donate</a>
@@ -33,18 +25,11 @@ get_header(); ?>
         <div class="container">
             <div class="inner">
 
-                <h3 class="large_text"><?php the_field('large_text_b2'); ?></h3>
-                <?php if (get_field('has_small_text_b2') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b2'); ?></span>
-                <?php endif; ?>
-                <div class="page_description"><?php the_field('description_b2'); ?></div>
-                <?php if (get_field('has_button_b2') != false):?>
-                    <?php if( get_field('button_b2') ): ?>
-                        <?php while( has_sub_field('button_b2') ): ?>
-                            <a class="btn orangeDark" href="<?php the_sub_field('button_link_b2'); ?>"><?php the_sub_field('button_text_b2'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <h3 class="large_text">Pray</h3>
+                <div class="page_description">
+                    <p>We’re asking everyone, everywhere to pray. Pray for those who do not yet know Jesus as their Lord and Saviour but who will by the grace of God and the ministry of Soul Revival Church. You can sign up to receive regular news and prayer updates to help inform your prayers.
+                    </p>
+                </div>
                 <form class="mailing_list" action="">
                     <div class="form-group">
                         <label for="" class="small_text">Join the Mailing List</label>
@@ -63,18 +48,10 @@ get_header(); ?>
     <div class="section" id="donate">
         <div class="container">
             <div class="inner">
-                <h3 class="large_text"><?php the_field('large_text_b3'); ?></h3>
-                <?php if (get_field('has_small_text_b3') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b3'); ?></span>
-                <?php endif; ?>
-                <div class="page_description"><?php the_field('description_b3'); ?></div>
-                <?php if (get_field('has_button_b3') != false):?>
-                    <?php if( get_field('button_b3') ): ?>
-                        <?php while( has_sub_field('button_b3') ): ?>
-                            <a class="btn orangeDark" href="<?php the_sub_field('button_link_b3'); ?>"><?php the_sub_field('button_text_b3'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <h3 class="large_text">Donate</h3>
+                <div class="page_description">
+                    <p>We’re asking you to prayerfully and seriously consider how you can partner with us financially into the future. The work of Soul Revival Church is funded only through the generous giving of those who attend and Friends of Soul Revival Church. The money that is given goes toward paying our staff, paying for our meeting place and funding other administrative costs.</p>
+                </div>
             </div>
             <div class="row give_options">
                 <div class="col-sm-4">
@@ -115,35 +92,33 @@ get_header(); ?>
     <div class="section" id="serve">
         <div class="container">
             <div class="inner">
-                <h3 class="large_text"><?php the_field('large_text_b4'); ?></h3>
-                <?php if (get_field('has_small_text_b4') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b4'); ?></span>
-                <?php endif; ?>
-                <div class="page_description"><?php the_field('description_b4'); ?></div>
-                <?php if (get_field('has_button_b4') != false):?>
-                    <?php if( get_field('button_b4') ): ?>
-                        <?php while( has_sub_field('button_b4') ): ?>
-                            <a class="btn orange" href="<?php the_sub_field('button_link_b4'); ?>"><?php the_sub_field('button_text_b4'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <h3 class="large_text">Serve</h3>
+                <div class="page_description">
+                    <p>At Soul Revival we give everyone an opportunity to participate in our community at a level that suits their age and stage of life.</p>
+                    <p>We’d love you consider volunteering to serve in one or more of these ways.</p>
+                </div>
+
             </div>
             <div class="row service_options">
                 <div class="col-md-2 hidden-sm hidden-xs"></div>
                 <div class="col-sm-6 col-md-4">
                     <h4 class="large_text">Service Opportunities</h4>
                     <ul class="list-unstyled list_groups">
-                        <?php if( get_field('link_l1') ): ?>
-                            <?php while( has_sub_field('link_l1') ): ?>
-                                <li>
-                                    <?php if (get_sub_field('link_type_l1') != 'false'):?>
-                                        <a href="<?php the_sub_field('internal_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
-                                    <?php elseif (get_sub_field('link_type_l1') == 'false'):?>
-                                        <a href="<?php the_sub_field('external_link_l1'); ?>"><span class="small_text"><?php the_sub_field('link_text_l1'); ?></span></a>
-                                    <?php endif; ?>
-                                </li>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <li>
+                            <a href="#"><span class="small_text"><strong>Berean Youth Stream</strong>(for High Schoolers)</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
                     </ul>
                     <p class="large_bree">Wanna get involved?</p>
                     <a class="btn orange" href="#">Let us know</a>
@@ -151,19 +126,23 @@ get_header(); ?>
                 <div class="col-sm-6 col-md-4">
                     <h4 class="large_text">Training Opportunities</h4>
                     <ul class="list-unstyled list_groups">
-                        <?php if( get_field('link_l2') ): ?>
-                            <?php while( has_sub_field('link_l2') ): ?>
-                                <li>
-                                    <?php if (get_sub_field('link_type_l2') != 'false'):?>
-                                        <a href="<?php the_sub_field('internal_link_l2'); ?>"><span class="small_text"><?php the_sub_field('link_text_l2'); ?></span></a>
-                                        <?php elseif (get_sub_field('link_type_l2') == 'false'):?>
-                                        <a href="<?php the_sub_field('external_link_l2'); ?>"><span class="small_text"><?php the_sub_field('link_text_l2'); ?></span></a>
-                                    <?php endif; ?>
-                                </li>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <li>
+                            <a href="#"><span class="small_text"><strong>Berean Youth Stream</strong>(for High Schoolers)</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="small_text">Our Gatherings</span></a>
+                        </li>
                     </ul>
-                    <a class="btn orange" href="/berea">Find Out More</a>
+                    <a class="btn orange" href="<?php bloginfo('url'); ?>/berea">Find Out More</a>
                 </div>
             </div>
         </div>
