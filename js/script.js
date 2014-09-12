@@ -22,3 +22,8 @@ function instaResponse(data)
 
     });
 }
+
+jQuery(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    jQuery(".video_area_responsive").fitVids();
+});

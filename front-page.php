@@ -14,11 +14,13 @@ get_header(); ?>
                             <?php $isFirstElementActive = false; ?>
                             <?php while( has_sub_field('slide_group') ): ?>
                                 <!-- Wrapper for slides -->
+
                                 <div class="item <?php if (!$isFirstElementActive) { $isFirstElementActive = true; echo " active "; } ?>">
-                                    <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
-                                    <div class="carousel-caption">
-                                        <?php the_sub_field('slide_caption'); ?>
-                                    </div>
+                                        <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
+                                        <a href="<?php the_sub_field('slide_link'); ?>" class="carousel-caption">
+                                            <?php the_sub_field('slide_caption'); ?>
+                                        </a>
+
                                 </div>
                             <?php endwhile;  $isFirstElementActive = false;?>
                         </div>

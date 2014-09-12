@@ -8,58 +8,42 @@ get_header(); ?>
     <div class="page_header">
         <div class="container">
             <div class="inner">
-                <?php if (get_field('has_small_text_b1') != false):?>
-                    <span class="small_text"><?php the_field('small_text_b1'); ?></span>
-                <?php endif; ?>
-                <h2 class="large_text"><?php the_field('large_text_b1'); ?></h2>
-
-                <div class="page_description"><?php the_field('description_b1'); ?></div>
-                <?php if (get_field('has_button_b1') != false):?>
-                    <?php if( get_field('button_b1') ): ?>
-                        <?php while( has_sub_field('button_b1') ): ?>
-                            <a class="btn yellowDark" href="<?php the_sub_field('button_link_b1'); ?>"><?php the_sub_field('button_text_b1'); ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
+                <div class="small_text">Jesus Changes</div>
+                <div class="large_text">Lives</div>
+                <div class="page_description">
+                    <p>Watch are some of the stories of those who come to Soul Revival &amp; see the ways Jesus has given them something new.</p>
+                </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <div class="story">
-                    <a href="<?php the_sub_field('video_link'); ?>">
-                        <span class="info">
-                            <span class="inner">
-                                <span class="small_text">Watch</span>
-                                <span class="large_text name">Brad<?php the_sub_field('name'); ?>'s</span>
-                                <span class="small_text">Story</span>
-                            </span>
-                        </span>
-                        <span class="image">
-                            <img src="http://placehold.it/320x180" alt="<?php the_sub_field('name'); ?>" />
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <?php if( get_field('story') ): ?>
-                <?php while( has_sub_field('story') ): ?>
-                    <div class="col-sm-6">
-                        <div class="story">
-                            <div class="info">
-                                <a href="<?php the_sub_field('video_link'); ?>" class="inner">
+        <?php if( get_field('story') ): ?>
+            <?php while( has_sub_field('story') ): ?>
+                <div class="col-sm-6">
+                    <div class="story">
+                        <a href="#" data-toggle="modal" data-target="#<?php the_sub_field('story_name'); ?>">
+                            <span class="info">
+                                <span class="inner">
                                     <span class="small_text">Watch</span>
-                                    <span class="name"><?php the_sub_field('name'); ?>'s</span>
+                                    <span class="large_text name"><?php the_sub_field('story_name'); ?>'s</span>
                                     <span class="small_text">Story</span>
-                                </a>
-                            </div>
-                            <div class="image">
-                                <a href="<?php the_sub_field('video_link'); ?>">
-                                    <img src="<?php the_sub_field('story_image'); ?>" alt="<?php the_sub_field('name'); ?>" />
-                                </a>
+                                </span>
+                            </span>
+                            <span class="image">
+                                <img src="<?php the_sub_field('story_image'); ?>" alt="<?php the_sub_field('story_name'); ?>" />
+                            </span>
+                        </a>
+                        <div class="modal fade yellow video_modal" id="<?php the_sub_field('story_name'); ?>">
+                            <div class="modal-dialog">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <div class="video_area_responsive">
+                                    <?php the_sub_field('video_link'); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
