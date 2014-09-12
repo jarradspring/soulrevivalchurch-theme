@@ -1829,6 +1829,8 @@ ul.list_groups li:last-child a {
 .sermon .audiojs .play-pause i {
   color: #ffffff;
   font-size: 20px;
+  height: 25px;
+  width: 25px;
   font-family: FontAwesome;
   font-style: normal;
   line-height: 1;
