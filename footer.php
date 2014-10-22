@@ -29,7 +29,7 @@
                             </div>
                             <div class="group medium">
                                 <a href="<?php bloginfo('url'); ?>/blog">Blog</a>
-                                <a href="<?php bloginfo('url'); ?>/berea-training">Berea Training</a>
+                                <a href="<?php bloginfo('url'); ?>/berea">Berea Training</a>
                                 <a href="<?php bloginfo('url'); ?>/give">Give</a>
                             </div>
                         </div>

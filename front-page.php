@@ -13,13 +13,11 @@ get_header(); ?>
                             <?php $isFirstElementActive = false; ?>
                             <?php while( has_sub_field('slide_group') ): ?>
                                 <!-- Wrapper for slides -->
-
                                 <div class="item <?php if (!$isFirstElementActive) { $isFirstElementActive = true; echo " active "; } ?>">
+                                    <a href="<?php the_sub_field('slide_link'); ?>">
                                         <img src="<?php the_sub_field('slider_image'); ?>" alt="<?php the_sub_field('alternative_image_text'); ?>" />
-                                        <a href="<?php the_sub_field('slide_link'); ?>" class="carousel-caption">
-                                            <?php the_sub_field('slide_caption'); ?>
-                                        </a>
-
+                                    </a>
+                                    <a href="<?php the_sub_field('slide_link'); ?>" class="btn slider_button">View More</a>
                                 </div>
                             <?php endwhile;  $isFirstElementActive = false;?>
                         </div>
@@ -33,7 +31,6 @@ get_header(); ?>
                     </a>
                 </div>
             </div>
-
             <div class="col-sm-12 col-md-4">
                 <div class="row">
                     <div class="col-sm-6 col-md-12">
@@ -195,8 +192,6 @@ get_header(); ?>
             <a class="btn blue" href="<?php bloginfo('url'); ?>/connect">See More</a>
         </div>
     </div>
-
 </div>
-
 
 <?php get_footer(); ?>

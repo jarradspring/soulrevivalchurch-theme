@@ -363,6 +363,13 @@ label {
 
 //SLIDER ---------------------------------------
 .slide {
+    .slider_button {
+        position:absolute;
+        left:50%;
+        bottom:30px;
+        margin-left:-95px;
+        color:@textGrey;
+    }
     .carousel-caption {
         .univers;
         font-size:40px;
@@ -375,6 +382,13 @@ label {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         bottom:auto;
+    }
+    a {
+        img {
+            position: relative;
+            width:100%;
+            height:auto;
+        }
     }
 }
 .carousel-control {
@@ -882,12 +896,12 @@ label {
         padding:40px 0;
         h2 {
             color:@blue;
-            font-size:36px;
+            font-size:40px;
             margin-bottom:0;
         }
         h3 {
             color:@blue;
-            font-size:24px;
+            font-size:30px;
             margin-top:0;
             &:focus {
                 outline:0;
@@ -1201,6 +1215,13 @@ ul.list_groups {
             font-style:normal;
             font-size:16px;
         }
+    }
+}
+#new {
+    .main .description {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 0;
     }
 }
 /* ==========================================================================
@@ -1962,6 +1983,11 @@ figure.alignnone {
         .bree;
         font-size:70px;
     }
+    .slide {
+        .slider_button {
+            bottom:70px;
+        }
+    }
     .navbar {
         .navbar-toggle {
             height:87px;
@@ -2198,7 +2224,7 @@ figure.alignnone {
         .page_header {
             margin-bottom:0;
             .inner {
-                width:425px;
+                width:435px;
                 margin:0 auto;
             }
             .btn-group {
@@ -2313,18 +2339,25 @@ figure.alignnone {
 @media (min-width: 992px) {
     .carousel-inner > .item > img, .carousel-inner > .item > a > img {
         display: block;
-        max-width: 1600px;
-        height:auto;
-        width:100%;
         line-height: 1;
         position: relative;
-        left: 50%;
-        top: 0;
-        margin-left: -50%;
+        max-width:200%;
     }
     #home {
         .carousel-inner > .item  {
             height:680px;
+            a {
+                img {
+                    position: relative;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    margin-left:0;
+                    height:100%;
+                    width:auto;
+                }
+            }
         }
 
         .block {
@@ -2481,9 +2514,6 @@ figure.alignnone {
     #home {
         .carousel-inner > .item  {
             height:800px;
-        }
-        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-            margin-left:-50%;
         }
         .block {
             height:400px;

@@ -125,7 +125,9 @@ get_header(); ?>
 
         </div>
     </div>
-
+    <div class="contact_banner green">
+        <?php require_once('contact_banner.php'); ?>
+    </div>
 </div>
 
 
