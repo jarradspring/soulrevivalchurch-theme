@@ -155,6 +155,21 @@ function blain_pagination() {
 	 }
 }
 
+
+function wps_parent_post(){
+    global $post;
+    if ($post->post_parent){
+        $ancestors=get_post_ancestors($post->ID);
+        $root=count($ancestors)-1;
+        $parent = $ancestors[$root];
+    } else {
+        $parent = $post->ID;
+    }
+    if($post->ID != $parent){
+        echo '<a href="'.get_permalink($parent).'" class="parent-post">Back to parent page</a>';
+    }
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -189,3 +204,5 @@ function my_theme_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'after_setup_theme', 'my_theme_add_editor_styles' );
+
+

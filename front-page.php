@@ -2,7 +2,6 @@
 /**
  * Template Name: Home
  */
-
 get_header(); ?>
 <div id="home" class="main_content">
     <div class="triblock">
@@ -41,15 +40,14 @@ get_header(); ?>
                         <div class="visit block">
                             <h2>Saturdays <span>5:00PM</span></h2>
                             <span class="small_text">40a Flora Street, Kirrawee</span>
-                            <a class="btn yellow" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
-                            <?php include_once('visit-modal.php'); ?>
+                            <a class="btn yellow" href="<?php bloginfo('url'); ?>/visit">I want to visit</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-12">
                         <div class="jesus_changes block">
                             <span class="small_text">Jesus changes</span>
                             <h2>Everything</h2>
-                            <div class="btn yellowMedium">Find out more</div>
+                            <a class="btn yellowMedium" href="<?php bloginfo('url'); ?>/jesus">Find out more</a>
                         </div>
                     </div>
                 </div>
@@ -194,7 +192,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <a class="btn blue" href="<?php bloginfo('url'); ?>/whats-on">See More</a>
+            <a class="btn blue" href="<?php bloginfo('url'); ?>/connect">See More</a>
         </div>
     </div>
 

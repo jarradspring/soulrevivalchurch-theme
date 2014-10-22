@@ -7,7 +7,7 @@ get_header(); ?>
     <div id="whatson" class="page_content">
         <div class="triblock">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6">
                     <div class="block groups text-center">
                         <div class="inner">
                             <p class="large_bree">Groups</p>
@@ -38,7 +38,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="col-sm-6 col-md-6">
                     <div class="sermons block">
 
                         <div class="inner">
@@ -49,7 +49,7 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="col-sm-6 col-md-6">
                     <div class="whats_on block">
                         <div class="inner">
                             <p class="large_bree">What's On</p>

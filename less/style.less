@@ -1245,6 +1245,7 @@ ul.list_groups {
         .small_text {
             display:block;
             color:#ffffff;
+            font-size:14px;
         }
         .btn {
             margin-top:5px;
@@ -1397,11 +1398,17 @@ ul.list_groups {
 }
 .content {
 }
+h2:focus {
+    outline:0;
+}
 .default {
     text-align: center;
     background:@bgGrey;
     &.error {
         padding:60px 0;
+    }
+    &.custom {
+        padding:60px 0 0;
     }
     &.search {
         padding:60px 0;
@@ -1413,6 +1420,12 @@ ul.list_groups {
                     color:@textGrey;
                 }
             }
+        }
+    }
+    .page_header {
+        h2 {
+            font-size:60px;
+            color:#ffffff;
         }
     }
     .main {
@@ -1681,20 +1694,42 @@ ul.list_groups {
         padding:0;
     }
     .inner {
-        padding:60px 50px 0;
+        padding:15px 50px 15px;
         height:192px;
         background:@blueDark;
+        .inner_text {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+    .sermon_image {
+        height:247px;
+        overflow:hidden;
+        img {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
     }
     .audiojs {
         background:@blueMedium;
-        padding:15px;
         box-shadow:none;
         width:100%;
         height:55px;
+        position:relative;
+        padding:15px 130px 15px 50px;
         .play-pause {
             border:0;
-            height:25px;
+            height:30px;
             width:30px;
+            position:absolute;
+            left:15px;
+            top:15px;
             i {
                 color:#ffffff;
                 font-size:20px;
@@ -1745,7 +1780,7 @@ ul.list_groups {
             background:@blueDark;
             height:7px;
             border:none;
-            width:50%;
+            width:100%;
             .progress {
                 background:#ffffff;
                 .border-radius(0);
@@ -1786,10 +1821,41 @@ ul.list_groups {
 /* ==========================================================================
    Modal
    ========================================================================== */
-
+.modal-backdrop {
+    display:none !important;
+}
+.modal_background {
+    background: #000000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
 .modal {
+    &:after {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-color: #000000;
+        opacity:0.5;
+        filter:alpha(opacity=50);
+    }
+    .modal-dialog {
+        width:100%;
+        position:relative;
+        left:0;
+    }
     .modal-content {
         .border-radius(0);
+        max-width:650px;
+        margin:0 auto;
         .modal-body {
             padding:20px;
         }
@@ -2448,17 +2514,6 @@ figure.alignnone {
                 .links {
                 }
             }
-        }
-    }
-    #whatson {
-        .groups {
-            height:720px;
-        }
-        .sermons {
-            height:720px;
-        }
-        .whats_on {
-            height:720px;
         }
     }
 }

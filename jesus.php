@@ -15,7 +15,7 @@ get_header(); ?>
                         <p>Jesus commands us to love God and love others. It’s the best way to live, because it’s how we were made to live.</p>
                         <p>We also believe that Jesus Changes Everything. Because of what Jesus has done for us on the cross we can now live in reconciled relationships, with God and each other. By His Spirit, Jesus can help change our thoughts, affections and actions in order to grow in these two loves.</p>
                         <p>Jesus has changed billions of peoples lives for the better....He can change your life too.</p>
-                        <a href="#" class="btn yellowMedium">More</a>
+                        <a href="<?php bloginfo('url'); ?>/jesus-changes-everything" class="btn yellowMedium">More</a>
                     </div>
                     <div class="changes_lives">
                         <div class="row">
@@ -32,7 +32,7 @@ get_header(); ?>
                                 <div class="links">
                                     <span class="most_recent small_text">Most Recent</span>
                                     <span class="small_text">Watch Brad's Story</span>
-                                    <div class="btn yellow">All Stories</div>
+                                    <a href="<?php bloginfo('url'); ?>/stories" class="btn yellow">All Stories</a>
                                 </div>
                                 <div class="image">
                                     <img src="http://placehold.it/160x240" alt=""/>
@@ -50,7 +50,7 @@ get_header(); ?>
                                 <span class="small_text">Love</span>
                                 <p class="large_bree">God</p>
                                 <p>We love God because He first loved us by sending His Son Jesus to die in our place for our sin. In response to His love for us He calls everyone, everywhere trust in Jesus, turn from their sin and love God with all their heart, soul, mind and strength.</p>
-                                <a class="btn yellowDark" href="#">More</a>
+                                <a class="btn yellowDark" href="<?php bloginfo('url'); ?>/love-god">More</a>
                             </div>
 
                         </div>
@@ -61,8 +61,8 @@ get_header(); ?>
                                 <span class="small_text">Love</span>
                                 <p class="large_bree">Others</p>
                                 <p>Jesus also calls us to love our neighbour as ourself. So, we are committed to sharing the love of Jesus person to person, generation to generation in our words and our actions.</p>
-                                <div class="btn yellow">More</div>
-                                <div class="btn yellow">Our Values</div>
+                                <a href="<?php bloginfo('url'); ?>/love-others" class="btn yellow">More</a>
+                                <a href="#values" class="btn yellow">Our Values</a>
                             </div>
 
                         </div>

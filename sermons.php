@@ -15,14 +15,18 @@ get_header(); ?>
                             <div class="row">
                                 <div class="col-sm-8">
                                     <div class="inner">
-                                        <p class="date"><?php the_sub_field('date'); ?></p>
-                                        <p class="title"><?php the_sub_field('sermon_title'); ?></p>
-                                        <p class="preacher"><?php the_sub_field('preacher'); ?></p>
+                                        <div class="inner_text">
+                                            <p class="date"><?php the_sub_field('date'); ?></p>
+                                            <p class="title"><?php the_sub_field('sermon_title'); ?></p>
+                                            <p class="preacher"><?php the_sub_field('preacher'); ?></p>
+                                        </div>
                                     </div>
                                     <audio src="<?php the_sub_field('audio'); ?>"></audio>
                                 </div>
                                 <div class="col-sm-4">
-                                    <img src="<?php the_sub_field('series_image'); ?>" alt="<?php the_sub_field('series_title'); ?>" />
+                                    <div class="sermon_image">
+                                        <img src="<?php the_sub_field('series_image'); ?>" alt="<?php the_sub_field('series_title'); ?>" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

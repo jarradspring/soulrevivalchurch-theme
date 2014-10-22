@@ -5,8 +5,7 @@
             <span class="small_text">40a Flora Street, Kirrawee</span>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-block" href="#" data-toggle="modal" data-target="#visitModal">I want to visit</a>
+            <a class="btn btn-block" href="<?php bloginfo('url'); ?>/visit">I want to visit</a>
         </div>
-        <?php include_once('visit-modal.php'); ?>
     </div>
 </div>

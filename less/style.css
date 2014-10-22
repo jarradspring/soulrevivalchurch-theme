@@ -1324,6 +1324,7 @@ ul.list_groups li:last-child a {
 .contact_banner .inner .small_text {
   display: block;
   color: #ffffff;
+  font-size: 14px;
 }
 .contact_banner .inner .btn {
   margin-top: 5px;
@@ -1559,12 +1560,18 @@ ul.list_groups li:last-child a {
   -moz-box-shadow: 0px 3px 0px #ad3e32;
   box-shadow: 0px 3px 0px #ad3e32;
 }
+h2:focus {
+  outline: 0;
+}
 .default {
   text-align: center;
   background: #f2f2f2;
 }
 .default.error {
   padding: 60px 0;
+}
+.default.custom {
+  padding: 60px 0 0;
 }
 .default.search {
   padding: 60px 0;
@@ -1575,6 +1582,10 @@ ul.list_groups li:last-child a {
 }
 .default.search .hentry .univers a {
   color: #6d6d6d;
+}
+.default .page_header h2 {
+  font-size: 60px;
+  color: #ffffff;
 }
 .default .main {
   padding-bottom: 50px;
@@ -1810,21 +1821,43 @@ ul.list_groups li:last-child a {
   padding: 0;
 }
 .sermon .inner {
-  padding: 60px 50px 0;
+  padding: 15px 50px 15px;
   height: 192px;
   background: #4b75b2;
 }
+.sermon .inner .inner_text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.sermon .sermon_image {
+  height: 247px;
+  overflow: hidden;
+}
+.sermon .sermon_image img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .sermon .audiojs {
   background: #5686ce;
-  padding: 15px;
   box-shadow: none;
   width: 100%;
   height: 55px;
+  position: relative;
+  padding: 15px 130px 15px 50px;
 }
 .sermon .audiojs .play-pause {
   border: 0;
-  height: 25px;
+  height: 30px;
   width: 30px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
 }
 .sermon .audiojs .play-pause i {
   color: #ffffff;
@@ -1872,7 +1905,7 @@ ul.list_groups li:last-child a {
   background: #4b75b2;
   height: 7px;
   border: none;
-  width: 50%;
+  width: 100%;
 }
 .sermon .audiojs .scrubber .progress {
   background: #ffffff;
@@ -1914,10 +1947,42 @@ ul.list_groups li:last-child a {
 /* ==========================================================================
    Modal
    ========================================================================== */
+.modal-backdrop {
+  display: none !important;
+}
+.modal_background {
+  background: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.modal:after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal .modal-dialog {
+  width: 100%;
+  position: relative;
+  left: 0;
+}
 .modal .modal-content {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  max-width: 650px;
+  margin: 0 auto;
 }
 .modal .modal-content .modal-body {
   padding: 20px;
@@ -2470,14 +2535,5 @@ figure.alignnone {
   }
   #home .instagram_feed .empty {
     height: 143px;
-  }
-  #whatson .groups {
-    height: 720px;
-  }
-  #whatson .sermons {
-    height: 720px;
-  }
-  #whatson .whats_on {
-    height: 720px;
   }
 }
